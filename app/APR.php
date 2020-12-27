@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class APR extends Model
+class Apr extends Model
 {
     protected $fillable = [
     	'item_no',
