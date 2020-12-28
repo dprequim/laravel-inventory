@@ -23,7 +23,7 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('apr.index') }}">
                     <i class="tim-icons icon-paper"></i>
                     <p>APR</p>
                 </a>

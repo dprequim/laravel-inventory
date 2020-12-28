@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\APR;
+use App\Apr;
 use Carbon\Carbon;
 
 class AprController extends Controller
@@ -18,7 +18,7 @@ class AprController extends Controller
     public function index()
     {
         return view('apr.index', [
-            'aprs' => APR::paginate(15), 
+            'apr' => Apr::paginate(15), 
             'month' => Carbon::now()->month
         ]);
     }
@@ -39,13 +39,13 @@ class AprController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, APR $aprs)
+    public function store(Request $request, Apr $apr)
     {
-        $aprs->create($request->all());
+        $apr->create($request->all());
 
         return redirect()
             ->route('apr.index')
-            ->withStatus('APR successfully created.');
+            ->withStatus('Apr successfully created.');
     }
 
     /**
@@ -54,10 +54,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(APR $aprs)
+    public function show(Apr $apr)
     {
         return view('apr.show', [
-            'aprs' => $aprs
+            'apr' => $apr
         ]);
     }
 
@@ -67,9 +67,9 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(APR $aprs)
+    public function edit(Apr $apr)
     {
-        return view('apr.edit', compact('aprs'));
+        return view('apr.edit', compact('apr'));
     }
 
     /**
@@ -79,13 +79,13 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, APR $aprs)
+    public function update(Request $request, Apr $apr)
     {
-        $aprs->update($request->all());
+        $apr->update($request->all());
 
         return redirect()
             ->route('apr.index')
-            ->withStatus('APR updated satisfactorily.');
+            ->withStatus('Apr updated satisfactorily.');
     }
 
     /**
@@ -94,10 +94,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(APR $aprs)
+    public function destroy(Apr $apr)
     {
-        $aprs->delete();
+        $apr->delete();
         
-        return back()->withStatus('APR successfully removed.');
+        return back()->withStatus('Apr successfully removed.');
     }
 }
