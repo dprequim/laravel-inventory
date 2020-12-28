@@ -25,63 +25,63 @@
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Agency Procurement Requests</p>
+                    <p>APR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Purchase Requests</p>
+                    <p>PR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Request for Quotation</p>
+                    <p>RFQ</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Certification of Expenses</p>
+                    <p>CENRR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Inventory Custodian Slip-Supply </p>
+                    <p>ICS-Supply </p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Property Acknowledgement Receipt- Supply</p>
+                    <p>PAR- Supply</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Requisition and Issue Slip</p>
+                    <p>RIS</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Inspection and Acceptance Report</p>
+                    <p>IAR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Abstract of Bids and Awards</p>
+                    <p>Abstract of Bids</p>
                 </a>
             </li>
 
@@ -95,7 +95,7 @@
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Budget Utilization Request and Status</p>
+                    <p>BUR</p>
                 </a>
             </li>
 
@@ -109,27 +109,27 @@
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Obligation Request and Status</p>
+                    <p>OBR</p>
                 </a>
             </li>
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Property Transfer Report </p>
+                    <p>PTR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Request for Pre-Repair Inspection and Evaluation Report</p>
+                    <p>Pre-Repair</p>
                 </a>
             </li>
             
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Waste Material Reports</p>
+                    <p>Waste Material</p>
                 </a>
             </li>
 
