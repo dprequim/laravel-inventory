@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{ route('apr.update', $aprs) }}" autocomplete="off">
+                        <form method="post" action="{{ route('apr.update', $apr) }}" autocomplete="off">
                             @csrf
                             @method('put')
 
@@ -24,12 +24,12 @@
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('item_no') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-item_no">{{ __('Name') }}</label>
-                                    <input type="text" name="item_no" id="input-item_no" class="form-control form-control-alternative{{ $errors->has('item_no') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('item_no', $aprs->item_no) }}" required autofocus>
+                                    <input type="text" name="item_no" id="input-item_no" class="form-control form-control-alternative{{ $errors->has('item_no') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('item_no', $apr->item_no) }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'item_no'])
                                 </div>
                                 <div class="form-group{{ $errors->has('item_desc') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-item_desc">{{ __('Description') }}</label>
-                                    <input type="text" name="item_desc" id="input-item_desc" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('item_desc', $aprs->item_desc) }}" required>
+                                    <input type="text" name="item_desc" id="input-item_desc" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('item_desc', $apr->item_desc) }}" required>
                                     @include('alerts.feedback', ['field' => 'item_desc'])
                                 </div>
 

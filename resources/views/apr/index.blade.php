@@ -28,7 +28,7 @@
                                 <th scope="col"></th>
                             </thead>
                             <tbody>
-                                @foreach ($aprs as $item)
+                                @foreach ($apr as $item)
                                     <tr>
                                         <td>{{ $item->item_no }}</td>
                                         <td>{{ $item->item_desc }}</td>
@@ -55,7 +55,7 @@
                </div>
                 <div class="card-footer py-4">
                     <nav class="d-flex justify-content-end" aria-label="...">
-                       {{ $aprs->links() }}
+                       {{ $apr->links() }}
                     </nav>
                 </div>
             </div>
