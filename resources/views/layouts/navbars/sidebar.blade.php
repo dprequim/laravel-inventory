@@ -58,7 +58,7 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('par.index') }}">
                     <i class="tim-icons icon-delivery-fast"></i>
                     <p>PAR- Supply</p>
                 </a>

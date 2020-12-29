@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\PurchaseRequest;
+use App\ParSupply;
 use Carbon\Carbon;
 
-class PrController extends Controller
+class ParController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class PrController extends Controller
 
     public function index()
     {
-        return view('purchaserequest.index', [
-            'purchaserequest' => PurchaseRequest::paginate(15), 
+        return view('par.index', [
+            'par' => ParSupply::paginate(15), 
             'month' => Carbon::now()->month
         ]);
     }
@@ -30,7 +30,7 @@ class PrController extends Controller
      */
     public function create()
     {
-        return view('purchaserequest.create');
+        return view('par.create');
     }
 
     /**
@@ -39,13 +39,13 @@ class PrController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, PurchaseRequest $purchaserequest)
+    public function store(Request $request, Parsupply $par)
     {
-        $purchaserequest->create($request->all());
+        $par->create($request->all());
 
         return redirect()
-            ->route('purchaserequest.index')
-            ->withStatus('Purchase Request successfully created.');
+            ->route('par.index')
+            ->withStatus('PROPERTY ACKNOWLEDGMENT RECEIPT successfully created.');
     }
 
     /**
@@ -54,10 +54,10 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(PurchaseRequest $purchaserequest)
+    public function show(ParSupply $par)
     {
-        return view('purchaserequest.show', [
-            'purchaserequest' => $purchase_request
+        return view('par.show', [
+            'par' => $par
         ]);
     }
 
@@ -67,9 +67,9 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(PurchaseRequest $purchaserequest)
+    public function edit(ParSupply $par)
     {
-        return view('purchaserequest.edit', compact('purchaserequest'));
+        return view('par.edit', compact('par'));
     }
 
     /**
@@ -79,13 +79,13 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PurchaseRequest $purchaserequest)
+    public function update(Request $request, ParSupply $par)
     {
-        $purchaserequest->update($request->all());
+        $par->update($request->all());
 
         return redirect()
-            ->route('purchaserequest.index')
-            ->withStatus('Purchase Request updated satisfactorily.');
+            ->route('par.index')
+            ->withStatus('PROPERTY ACKNOWLEDGMENT RECEIPT updated satisfactorily.');
     }
 
     /**
@@ -94,10 +94,10 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PurchaseRequest $purchaserequest)
+    public function destroy(ParSupply $par)
     {
-        $purchaserequest->delete();
+        $par->delete();
         
-        return back()->withStatus('Purchase Request successfully removed.');
+        return back()->withStatus('PROPERTY ACKNOWLEDGMENT RECEIPT successfully removed.');
     }
 }

@@ -9,8 +9,9 @@ class ParSupply extends Model
     protected $fillable = [
     	'quantity',
     	'unit',
-    	'discription',
+    	'description',
     	'property_no',
     	'date_aquired',
     	'amount'
+    ];
 }
