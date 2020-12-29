@@ -72,14 +72,14 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('iar.index') }}">
                     <i class="tim-icons icon-pin"></i>
                     <p>IAR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('aba.index') }}">
                     <i class="tim-icons icon-notes"></i>
                     <p>Abstract of Bids</p>
                 </a>
