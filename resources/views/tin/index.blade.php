@@ -12,6 +12,7 @@
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('tin.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ 'api/tin/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
                 </div>
