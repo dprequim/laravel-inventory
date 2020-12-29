@@ -30,9 +30,9 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('purchaserequest.index') }}">
                     <i class="tim-icons icon-satisfied"></i>
-                    <p>PR</p>
+                    <p>Purchase Request</p>
                 </a>
             </li>
 
