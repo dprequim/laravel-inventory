@@ -10,77 +10,77 @@
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('tin.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-money-coins"></i>
                     <p>Company TIN</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-notes"></i>
                     <p>Routine Slip</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-paper"></i>
                     <p>APR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-satisfied"></i>
                     <p>PR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-tap-02"></i>
                     <p>RFQ</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-pencil"></i>
                     <p>CENRR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-settings"></i>
                     <p>ICS-Supply </p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-delivery-fast"></i>
                     <p>PAR- Supply</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-single-copy-04"></i>
                     <p>RIS</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-pin"></i>
                     <p>IAR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-notes"></i>
                     <p>Abstract of Bids</p>
                 </a>
             </li>
@@ -94,41 +94,41 @@
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-sound-wave"></i>
                     <p>BUR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-money-coins"></i>
                     <p>Purchase Order</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-heart-2"></i>
                     <p>OBR</p>
                 </a>
             </li>
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-credit-card"></i>
                     <p>PTR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-settings"></i>
                     <p>Pre-Repair</p>
                 </a>
             </li>
             
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
+                    <i class="tim-icons icon-trash-simple"></i>
                     <p>Waste Material</p>
                 </a>
             </li>
