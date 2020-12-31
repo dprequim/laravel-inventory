@@ -13,4 +13,5 @@ class BidsAndAwards extends Model
     	'parriculars',
     	'budget_cost',
     	'remarks'
+    ];
 }

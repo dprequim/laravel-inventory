@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\PurchaseRequest;
+use App\InspectionReport;
 use Carbon\Carbon;
 
-class PrController extends Controller
+class IarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class PrController extends Controller
 
     public function index()
     {
-        return view('purchaserequest.index', [
-            'purchaserequest' => PurchaseRequest::paginate(15), 
+        return view('iar.index', [
+            'iar' => InspectionReport::paginate(15), 
             'month' => Carbon::now()->month
         ]);
     }
@@ -30,7 +30,7 @@ class PrController extends Controller
      */
     public function create()
     {
-        return view('purchaserequest.create');
+        return view('iar.create');
     }
 
     /**
@@ -39,13 +39,13 @@ class PrController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, PurchaseRequest $purchaserequest)
+    public function store(Request $request, InspectionReport $iar)
     {
-        $purchaserequest->create($request->all());
+        $iar->create($request->all());
 
         return redirect()
-            ->route('purchaserequest.index')
-            ->withStatus('Purchase Request successfully created.');
+            ->route('iar.index')
+            ->withStatus('INSPECTION AND ACCEPTANCE REPORT successfully created.');
     }
 
     /**
@@ -54,10 +54,10 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(PurchaseRequest $purchaserequest)
+    public function show(InspectionReport $iar)
     {
-        return view('purchaserequest.show', [
-            'purchaserequest' => $purchase_request
+        return view('iar.show', [
+            'iar' => $iar
         ]);
     }
 
@@ -67,9 +67,9 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(PurchaseRequest $purchaserequest)
+    public function edit(InspectionReport $iar)
     {
-        return view('purchaserequest.edit', compact('purchaserequest'));
+        return view('iar.edit', compact('iar'));
     }
 
     /**
@@ -79,13 +79,13 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PurchaseRequest $purchaserequest)
+    public function update(Request $request, InspectionReport $iar)
     {
-        $purchaserequest->update($request->all());
+        $iar->update($request->all());
 
         return redirect()
-            ->route('purchaserequest.index')
-            ->withStatus('Purchase Request updated satisfactorily.');
+            ->route('iar.index')
+            ->withStatus('INSPECTION AND ACCEPTANCE REPORT updated satisfactorily.');
     }
 
     /**
@@ -94,10 +94,10 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PurchaseRequest $purchaserequest)
+    public function destroy(InspectionReport $iar)
     {
-        $purchaserequest->delete();
+        $iar->delete();
         
-        return back()->withStatus('Purchase Request successfully removed.');
+        return back()->withStatus('INSPECTION AND ACCEPTANCE REPORT successfully removed.');
     }
 }

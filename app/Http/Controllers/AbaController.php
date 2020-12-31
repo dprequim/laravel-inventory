@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\PurchaseRequest;
+use App\BidsAndAwards;
 use Carbon\Carbon;
 
-class PrController extends Controller
+class AbaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class PrController extends Controller
 
     public function index()
     {
-        return view('purchaserequest.index', [
-            'purchaserequest' => PurchaseRequest::paginate(15), 
+        return view('aba.index', [
+            'aba' => BidsAndAwards::paginate(15), 
             'month' => Carbon::now()->month
         ]);
     }
@@ -30,7 +30,7 @@ class PrController extends Controller
      */
     public function create()
     {
-        return view('purchaserequest.create');
+        return view('aba.create');
     }
 
     /**
@@ -39,13 +39,13 @@ class PrController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, PurchaseRequest $purchaserequest)
+    public function store(Request $request, BidsAndAwards $aba)
     {
-        $purchaserequest->create($request->all());
+        $aba->create($request->all());
 
         return redirect()
-            ->route('purchaserequest.index')
-            ->withStatus('Purchase Request successfully created.');
+            ->route('aba.index')
+            ->withStatus('Apr successfully created.');
     }
 
     /**
@@ -54,10 +54,10 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(PurchaseRequest $purchaserequest)
+    public function show(BidsAndAwards $aba)
     {
-        return view('purchaserequest.show', [
-            'purchaserequest' => $purchase_request
+        return view('aba.show', [
+            'aba' => $aba
         ]);
     }
 
@@ -67,9 +67,9 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(PurchaseRequest $purchaserequest)
+    public function edit(BidsAndAwards $aba)
     {
-        return view('purchaserequest.edit', compact('purchaserequest'));
+        return view('aba.edit', compact('aba'));
     }
 
     /**
@@ -79,13 +79,13 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PurchaseRequest $purchaserequest)
+    public function update(Request $request, BidsAndAwards $aba)
     {
-        $purchaserequest->update($request->all());
+        $aba->update($request->all());
 
         return redirect()
-            ->route('purchaserequest.index')
-            ->withStatus('Purchase Request updated satisfactorily.');
+            ->route('aba.index')
+            ->withStatus('Bids And Awards updated satisfactorily.');
     }
 
     /**
@@ -94,10 +94,10 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PurchaseRequest $purchaserequest)
+    public function destroy(BidsAndAwards $aba)
     {
-        $purchaserequest->delete();
+        $aba->delete();
         
-        return back()->withStatus('Purchase Request successfully removed.');
+        return back()->withStatus('BidsAndAwards successfully removed.');
     }
 }

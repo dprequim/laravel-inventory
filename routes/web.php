@@ -32,6 +32,9 @@ Route::group(['middleware' => 'auth'], function () {
         'routines' => 'RoutineController',
         'apr' => 'AprController',
         'purchaserequest' => 'PrController',
+        'par' => 'ParController',
+        'iar' => 'IarController',
+        'aba' => 'AbaController',
     ]);
     
     Route::resource('transactions', 'TransactionController')->except(['create', 'show']);
