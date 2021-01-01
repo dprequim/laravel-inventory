@@ -31,6 +31,8 @@ Route::group(['middleware' => 'auth'], function () {
         'tin' => 'TinController',
         'routines' => 'RoutineController',
         'apr' => 'AprController',
+        'ics' => 'IcsController',   
+
         'purchaserequest' => 'PrController',
         'par' => 'ParController',
         'iar' => 'IarController',

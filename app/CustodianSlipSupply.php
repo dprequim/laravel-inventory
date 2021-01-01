@@ -16,4 +16,5 @@ class CustodianSlipSupply extends Model
     	'descprition',
     	'inventory_no',
     	'estimated_life'
+    ];
 }
