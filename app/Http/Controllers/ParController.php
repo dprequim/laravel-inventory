@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Apr;
+use App\ParSupply;
 use Carbon\Carbon;
 
-class AprController extends Controller
+class ParController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class AprController extends Controller
 
     public function index()
     {
-        return view('apr.index', [
-            'apr' => Apr::paginate(15), 
+        return view('par.index', [
+            'par' => ParSupply::paginate(15), 
             'month' => Carbon::now()->month
         ]);
     }
@@ -30,7 +30,7 @@ class AprController extends Controller
      */
     public function create()
     {
-        return view('apr.create');
+        return view('par.create');
     }
 
     /**
@@ -39,13 +39,13 @@ class AprController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Apr $apr)
+    public function store(Request $request, Parsupply $par)
     {
-        $apr->create($request->all());
+        $par->create($request->all());
 
         return redirect()
-            ->route('apr.index')
-            ->withStatus('Apr successfully created.');
+            ->route('par.index')
+            ->withStatus('PROPERTY ACKNOWLEDGMENT RECEIPT successfully created.');
     }
 
     /**
@@ -54,10 +54,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Apr $apr)
+    public function show(ParSupply $par)
     {
-        return view('apr.show', [
-            'apr' => $apr
+        return view('par.show', [
+            'par' => $par
         ]);
     }
 
@@ -67,9 +67,9 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Apr $apr)
+    public function edit(ParSupply $par)
     {
-        return view('apr.edit', compact('apr'));
+        return view('par.edit', compact('par'));
     }
 
     /**
@@ -79,13 +79,13 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Apr $apr)
+    public function update(Request $request, ParSupply $par)
     {
-        $apr->update($request->all());
+        $par->update($request->all());
 
         return redirect()
-            ->route('apr.index')
-            ->withStatus('Apr updated satisfactorily.');
+            ->route('par.index')
+            ->withStatus('PROPERTY ACKNOWLEDGMENT RECEIPT updated satisfactorily.');
     }
 
     /**
@@ -94,10 +94,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Apr $apr)
+    public function destroy(ParSupply $par)
     {
-        $apr->delete();
+        $par->delete();
         
-        return back()->withStatus('Apr successfully removed.');
+        return back()->withStatus('PROPERTY ACKNOWLEDGMENT RECEIPT successfully removed.');
     }
 }

@@ -22,5 +22,6 @@ class PurchasedOrder extends Model
     	'funds_available',
     	'burs_no',
     	'date_burs',
-    	'amount',
+    	'ors_amount',
+    ];
 }

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Apr;
+use App\InspectionReport;
 use Carbon\Carbon;
 
-class AprController extends Controller
+class IarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class AprController extends Controller
 
     public function index()
     {
-        return view('apr.index', [
-            'apr' => Apr::paginate(15), 
+        return view('iar.index', [
+            'iar' => InspectionReport::paginate(15), 
             'month' => Carbon::now()->month
         ]);
     }
@@ -30,7 +30,7 @@ class AprController extends Controller
      */
     public function create()
     {
-        return view('apr.create');
+        return view('iar.create');
     }
 
     /**
@@ -39,13 +39,13 @@ class AprController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Apr $apr)
+    public function store(Request $request, InspectionReport $iar)
     {
-        $apr->create($request->all());
+        $iar->create($request->all());
 
         return redirect()
-            ->route('apr.index')
-            ->withStatus('Apr successfully created.');
+            ->route('iar.index')
+            ->withStatus('INSPECTION AND ACCEPTANCE REPORT successfully created.');
     }
 
     /**
@@ -54,10 +54,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Apr $apr)
+    public function show(InspectionReport $iar)
     {
-        return view('apr.show', [
-            'apr' => $apr
+        return view('iar.show', [
+            'iar' => $iar
         ]);
     }
 
@@ -67,9 +67,9 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Apr $apr)
+    public function edit(InspectionReport $iar)
     {
-        return view('apr.edit', compact('apr'));
+        return view('iar.edit', compact('iar'));
     }
 
     /**
@@ -79,13 +79,13 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Apr $apr)
+    public function update(Request $request, InspectionReport $iar)
     {
-        $apr->update($request->all());
+        $iar->update($request->all());
 
         return redirect()
-            ->route('apr.index')
-            ->withStatus('Apr updated satisfactorily.');
+            ->route('iar.index')
+            ->withStatus('INSPECTION AND ACCEPTANCE REPORT updated satisfactorily.');
     }
 
     /**
@@ -94,10 +94,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Apr $apr)
+    public function destroy(InspectionReport $iar)
     {
-        $apr->delete();
+        $iar->delete();
         
-        return back()->withStatus('Apr successfully removed.');
+        return back()->withStatus('INSPECTION AND ACCEPTANCE REPORT successfully removed.');
     }
 }

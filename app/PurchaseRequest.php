@@ -16,4 +16,5 @@ class PurchaseRequest extends Model
     	'quantity',
     	'unit_cost',
     	'total_cost'
+    ];
 }

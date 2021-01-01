@@ -23,16 +23,16 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('apr.index') }}">
                     <i class="tim-icons icon-paper"></i>
                     <p>APR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('purchaserequest.index') }}">
                     <i class="tim-icons icon-satisfied"></i>
-                    <p>PR</p>
+                    <p>Purchase Request</p>
                 </a>
             </li>
 
@@ -58,7 +58,7 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('par.index') }}">
                     <i class="tim-icons icon-delivery-fast"></i>
                     <p>PAR- Supply</p>
                 </a>
@@ -72,14 +72,14 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('iar.index') }}">
                     <i class="tim-icons icon-pin"></i>
                     <p>IAR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('aba.index') }}">
                     <i class="tim-icons icon-notes"></i>
                     <p>Abstract of Bids</p>
                 </a>
@@ -100,7 +100,7 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('porder.index') }}">
                     <i class="tim-icons icon-money-coins"></i>
                     <p>Purchase Order</p>
                 </a>

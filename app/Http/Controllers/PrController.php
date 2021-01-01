@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Apr;
+use App\PurchaseRequest;
 use Carbon\Carbon;
 
-class AprController extends Controller
+class PrController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class AprController extends Controller
 
     public function index()
     {
-        return view('apr.index', [
-            'apr' => Apr::paginate(15), 
+        return view('purchaserequest.index', [
+            'purchaserequest' => PurchaseRequest::paginate(15), 
             'month' => Carbon::now()->month
         ]);
     }
@@ -30,7 +30,7 @@ class AprController extends Controller
      */
     public function create()
     {
-        return view('apr.create');
+        return view('purchaserequest.create');
     }
 
     /**
@@ -39,13 +39,13 @@ class AprController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Apr $apr)
+    public function store(Request $request, PurchaseRequest $purchaserequest)
     {
-        $apr->create($request->all());
+        $purchaserequest->create($request->all());
 
         return redirect()
-            ->route('apr.index')
-            ->withStatus('Apr successfully created.');
+            ->route('purchaserequest.index')
+            ->withStatus('Purchase Request successfully created.');
     }
 
     /**
@@ -54,10 +54,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Apr $apr)
+    public function show(PurchaseRequest $purchaserequest)
     {
-        return view('apr.show', [
-            'apr' => $apr
+        return view('purchaserequest.show', [
+            'purchaserequest' => $purchase_request
         ]);
     }
 
@@ -67,9 +67,9 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Apr $apr)
+    public function edit(PurchaseRequest $purchaserequest)
     {
-        return view('apr.edit', compact('apr'));
+        return view('purchaserequest.edit', compact('purchaserequest'));
     }
 
     /**
@@ -79,13 +79,13 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Apr $apr)
+    public function update(Request $request, PurchaseRequest $purchaserequest)
     {
-        $apr->update($request->all());
+        $purchaserequest->update($request->all());
 
         return redirect()
-            ->route('apr.index')
-            ->withStatus('Apr updated satisfactorily.');
+            ->route('purchaserequest.index')
+            ->withStatus('Purchase Request updated satisfactorily.');
     }
 
     /**
@@ -94,10 +94,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Apr $apr)
+    public function destroy(PurchaseRequest $purchaserequest)
     {
-        $apr->delete();
+        $purchaserequest->delete();
         
-        return back()->withStatus('Apr successfully removed.');
+        return back()->withStatus('Purchase Request successfully removed.');
     }
 }

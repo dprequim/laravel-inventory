@@ -12,6 +12,7 @@
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('apr.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ 'api/apr/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
                 </div>
@@ -28,7 +29,7 @@
                                 <th scope="col"></th>
                             </thead>
                             <tbody>
-                                @foreach ($aprs as $item)
+                                @foreach ($apr as $item)
                                     <tr>
                                         <td>{{ $item->item_no }}</td>
                                         <td>{{ $item->item_desc }}</td>
@@ -55,7 +56,7 @@
                </div>
                 <div class="card-footer py-4">
                     <nav class="d-flex justify-content-end" aria-label="...">
-                       {{ $aprs->links() }}
+                       {{ $apr->links() }}
                     </nav>
                 </div>
             </div>

@@ -3,8 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class APR extends Model
+class Apr extends Model
 {
     protected $fillable = [
     	'item_no',

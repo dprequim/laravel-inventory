@@ -11,5 +11,5 @@ class InspectionReport extends Model
     	'description',
     	'unit',
     	'quantity'
-    	
+    	];
 }

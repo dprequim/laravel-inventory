@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Apr;
+use App\BidsAndAwards;
 use Carbon\Carbon;
 
-class AprController extends Controller
+class AbaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class AprController extends Controller
 
     public function index()
     {
-        return view('apr.index', [
-            'apr' => Apr::paginate(15), 
+        return view('aba.index', [
+            'aba' => BidsAndAwards::paginate(15), 
             'month' => Carbon::now()->month
         ]);
     }
@@ -30,7 +30,7 @@ class AprController extends Controller
      */
     public function create()
     {
-        return view('apr.create');
+        return view('aba.create');
     }
 
     /**
@@ -39,12 +39,12 @@ class AprController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Apr $apr)
+    public function store(Request $request, BidsAndAwards $aba)
     {
-        $apr->create($request->all());
+        $aba->create($request->all());
 
         return redirect()
-            ->route('apr.index')
+            ->route('aba.index')
             ->withStatus('Apr successfully created.');
     }
 
@@ -54,10 +54,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Apr $apr)
+    public function show(BidsAndAwards $aba)
     {
-        return view('apr.show', [
-            'apr' => $apr
+        return view('aba.show', [
+            'aba' => $aba
         ]);
     }
 
@@ -67,9 +67,9 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Apr $apr)
+    public function edit(BidsAndAwards $aba)
     {
-        return view('apr.edit', compact('apr'));
+        return view('aba.edit', compact('aba'));
     }
 
     /**
@@ -79,13 +79,13 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Apr $apr)
+    public function update(Request $request, BidsAndAwards $aba)
     {
-        $apr->update($request->all());
+        $aba->update($request->all());
 
         return redirect()
-            ->route('apr.index')
-            ->withStatus('Apr updated satisfactorily.');
+            ->route('aba.index')
+            ->withStatus('Bids And Awards updated satisfactorily.');
     }
 
     /**
@@ -94,10 +94,10 @@ class AprController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Apr $apr)
+    public function destroy(BidsAndAwards $aba)
     {
-        $apr->delete();
+        $aba->delete();
         
-        return back()->withStatus('Apr successfully removed.');
+        return back()->withStatus('BidsAndAwards successfully removed.');
     }
 }
