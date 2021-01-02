@@ -12,6 +12,7 @@
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('ics.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ 'api/ics/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
                 </div>
@@ -20,29 +21,23 @@
                     <div class="">
                         <table class="table tablesorter " id="">
                             <thead class=" text-primary">
-                                <th scope="col">ITEM NUMBER</th>
                                 <th scope="col">ITEM DESCRIPTION</th>
                                 <th scope="col">QUANTITY</th>
                                 <th scope="col">UNIT AMOUNT</th>
                                 <th scope="col">UNIT COST</th>
                                 <th scope="col">TOTAL COST</th>
                                 <th scope="col">DESCRIPTION</th>
-                                <th scope="col">INVENTORY NUMBER</th>
-                                <th scope="col">ESTIMATED LIFE</th>
                                 <th scope="col"></th>
                             </thead>
                             <tbody>
                                 @foreach ($ics as $dev)
                                     <tr>
-                                        <td>{{ $dev->item_no }}</td>
                                         <td>{{ $dev->item_desc }}</td>
                                         <td>{{ $dev->quantity }}</td>
                                         <td>{{ $dev->unit_amount }}</td>
                                         <td>{{ $dev->unit_cost }}</td>
                                         <td>{{ $dev->total_cost }}</td>
                                         <td>{{ $dev->descprition }}</td>
-                                        <td>{{ $dev->inventory_no }}</td>
-                                        <td>{{ $dev->estimated_life }}</td>
                                         <td class="td-actions text-right">
                                             <a href="{{ route('ics.edit', $dev) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Item">
                                                 <i class="tim-icons icon-pencil"></i>

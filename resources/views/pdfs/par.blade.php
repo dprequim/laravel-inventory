@@ -46,21 +46,22 @@ td {
 
       <table class="tables1">
         <tr>
-          <th scope="col">OFFICE SECTION.</th>
-          <th scope="col">P.R No.</th>
-          <th scope="col">CENTER CODE.</th>
-          <th scope="col">DATE.</th>
+          <th scope="col">Quantiy.</th>
+          <th scope="col">UNIT.</th>
+          <th scope="col">Description.</th>
           <th scope="col">PROPERTY No.</th>
-          <th scope="col">ITEM DESC.</th> 
+          <th scope="col">DATE AQUIRED.</th>
+          <th scope="col">AMOUNT.</th>
+          <th scope="col"></th>
         </tr>
             @foreach($data as $key => $item)
         <tr>
-          <td>{{ $pr->office_section }}</td>
-          <td>{{ $pr->pr_no }}</td>
-          <td>{{ $pr->center_code }}</td>
-          <td>{{ $pr->date }}</td>
-          <td>{{ $pr->property_no }}</td>
-          <td>{{ $pr->item_desc }}</td>
+          <td>{{ $item->quantity }}</td>
+          <td>{{ $item->unit }}</td>
+          <td>{{ $item->description }}</td>
+          <td>{{ $item->property_no }}</td>
+          <td>{{ $item->date_aquired }}</td>
+          <td>{{ $item->amount }}</td>
         </tr>
       @endforeach
     </table>
