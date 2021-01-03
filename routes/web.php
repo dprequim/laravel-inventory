@@ -38,7 +38,6 @@ Route::group(['middleware' => 'auth'], function () {
         'iar' => 'IarController',
         'aba' => 'AbaController',
         'porder' => 'PoController',
-
     ]);
     
     Route::resource('transactions', 'TransactionController')->except(['create', 'show']);
