@@ -99,7 +99,7 @@
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'porder') class="active " @endif>
                 <a href="{{ route('porder.index') }}">
                     <i class="tim-icons icon-money-coins"></i>
                     <p>Purchase Order</p>
@@ -127,7 +127,7 @@
             </li>
             
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('waste.index') }}">
                     <i class="tim-icons icon-trash-simple"></i>
                     <p>Waste Material</p>
                 </a>
