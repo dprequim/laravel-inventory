@@ -9,6 +9,7 @@ use App\Apr;
 use App\PurchaseRequest;
 use App\CustodianSlipSupply;
 use App\ParSupply;
+use App\MaterialReports;
 class PdfController extends Controller
 {
     public function tinpdf()
@@ -40,5 +41,11 @@ class PdfController extends Controller
         $data = ParSupply::get();
         $pdf = PDF::loadView('pdfs.par' , compact('data'));
         return $pdf->stream('Property Acknowledgement Receipt.pdf');
+    }
+    public function wastepdf()
+    {   
+        $data = MaterialReports::get();
+        $pdf = PDF::loadView('pdfs.waste' , compact('data'));
+        return $pdf->stream('Waste Material Report.pdf');
     }
 }
