@@ -17,4 +17,5 @@ class MaterialReports extends Model
     	'receipt_no',
     	'receipt_date',
     	'receipt_amount',
+    ];
 }

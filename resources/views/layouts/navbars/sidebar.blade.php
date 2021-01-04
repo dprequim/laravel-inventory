@@ -51,14 +51,14 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('ics.index') }}">
                     <i class="tim-icons icon-settings"></i>
                     <p>ICS-Supply </p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('par.index') }}">
                     <i class="tim-icons icon-delivery-fast"></i>
                     <p>PAR- Supply</p>
                 </a>
@@ -72,14 +72,14 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('iar.index') }}">
                     <i class="tim-icons icon-pin"></i>
                     <p>IAR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('aba.index') }}">
                     <i class="tim-icons icon-notes"></i>
                     <p>Abstract of Bids</p>
                 </a>
@@ -93,14 +93,14 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('burs.index') }}">
                     <i class="tim-icons icon-sound-wave"></i>
                     <p>BUR</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+            <li @if ($pageSlug == 'porder') class="active " @endif>
+                <a href="{{ route('porder.index') }}">
                     <i class="tim-icons icon-money-coins"></i>
                     <p>Purchase Order</p>
                 </a>
@@ -127,7 +127,7 @@
             </li>
             
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('waste.index') }}">
                     <i class="tim-icons icon-trash-simple"></i>
                     <p>Waste Material</p>
                 </a>

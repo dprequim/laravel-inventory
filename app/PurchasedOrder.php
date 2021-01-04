@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
 class PurchasedOrder extends Model
 {
     protected $fillable = [
@@ -22,5 +21,6 @@ class PurchasedOrder extends Model
     	'funds_available',
     	'burs_no',
     	'date_burs',
-    	'amount',
+    	'ors_amount',
+    ];
 }

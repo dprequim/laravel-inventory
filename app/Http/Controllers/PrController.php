@@ -54,7 +54,7 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(PurchaseRequest $purchase_request)
+    public function show(PurchaseRequest $purchaserequest)
     {
         return view('purchaserequest.show', [
             'purchaserequest' => $purchase_request
@@ -67,7 +67,7 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(PurchaseRequest $purchase_request)
+    public function edit(PurchaseRequest $purchaserequest)
     {
         return view('purchaserequest.edit', compact('purchaserequest'));
     }
@@ -79,9 +79,9 @@ class PrController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PurchaseRequest $purchase_request)
+    public function update(Request $request, PurchaseRequest $purchaserequest)
     {
-        $purchase_request->update($request->all());
+        $purchaserequest->update($request->all());
 
         return redirect()
             ->route('purchaserequest.index')

@@ -17,7 +17,7 @@ class CreateParSuppliesTable extends Migration
             $table->id();
             $table->string('quantity');
             $table->string('unit');
-            $table->string('discription');
+            $table->string('description');
             $table->string('property_no');
             $table->string('date_aquired');
             $table->string('amount');
