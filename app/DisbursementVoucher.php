@@ -31,6 +31,7 @@ class DisbursementVoucher extends Model
     	'signature',
     	'printed_name',
     	'jev_no',
-
+];
 
 }
+

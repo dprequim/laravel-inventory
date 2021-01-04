@@ -37,14 +37,14 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('rfq.index') }}">
                     <i class="tim-icons icon-tap-02"></i>
                     <p>RFQ</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('cenrr.index') }}">
                     <i class="tim-icons icon-pencil"></i>
                     <p>CENRR</p>
                 </a>
@@ -86,7 +86,7 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('dv.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
                     <p>Disbursement Voucher</p>
                 </a>
