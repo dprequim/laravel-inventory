@@ -10,6 +10,10 @@ use App\PurchaseRequest;
 use App\CustodianSlipSupply;
 use App\ParSupply;
 use App\MaterialReports;
+use App\UtilizationRequest;
+use App\CertificationOfExpenses;
+use App\DisbursementVoucher;
+use App\RequestForQuotation;
 class PdfController extends Controller
 {
     public function tinpdf()
@@ -47,5 +51,29 @@ class PdfController extends Controller
         $data = MaterialReports::get();
         $pdf = PDF::loadView('pdfs.waste' , compact('data'));
         return $pdf->stream('Waste Material Report.pdf');
+    }
+    public function burspdf()
+    {   
+        $data = UtilizationRequest::get();
+        $pdf = PDF::loadView('pdfs.burs' , compact('data'));
+        return $pdf->stream('Utilization Request.pdf');
+    }
+    public function cenrrpdf()
+    {   
+        $data = CertificationOfExpenses::get();
+        $pdf = PDF::loadView('pdfs.cenrr' , compact('data'));
+        return $pdf->stream('Certification Of Expenses.pdf');
+    }
+    public function dvpdf()
+    {   
+        $data = DisbursementVoucher::get();
+        $pdf = PDF::loadView('pdfs.dv' , compact('data'));
+        return $pdf->stream('Disbursement Voucher.pdf');
+    }
+    public function rfqpdf()
+    {   
+        $data = RequestForQuotation::get();
+        $pdf = PDF::loadView('pdfs.rfq' , compact('data'));
+        return $pdf->stream('Request For Quotation.pdf');
     }
 }
