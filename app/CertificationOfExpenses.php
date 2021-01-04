@@ -12,5 +12,6 @@ class CertificationOfExpenses extends Model
     	'office',
     	'division',
     	'date',
-    	'unit_amount '
+    	'unit_amount'
+];   	
 }

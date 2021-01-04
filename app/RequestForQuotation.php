@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App;
 
@@ -15,6 +15,6 @@ class RequestForQuotation extends Model
     	'unit_price',
     	'total_amount'
     	
-
+];
 
 }
