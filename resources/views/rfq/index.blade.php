@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'ics', 'pageSlug' => 'ics', 'section' => 'ics'])
+@extends('layouts.app', ['page' => 'rfq', 'pageSlug' => 'rfq', 'section' => 'rfq'])
 
 @section('content')
     @include('alerts.success')
@@ -8,40 +8,42 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Custodian Slip Supply</h4>
+                            <h4 class="card-title">Request For Quotation</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('ics.create') }}" class="btn btn-sm btn-primary">New Method</a>
-                            <a href="{{ 'api/ics/pdf' }}" class="btn btn-sm btn-primary">Print</a>
+                            <a href="{{ route('rfq.create') }}" class="btn btn-sm btn-primary">New Method</a>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="">
+                    
+                    <div class=""> 
                         <table class="table tablesorter " id="">
                             <thead class=" text-primary">
-                                <th scope="col">ITEM DESCRIPTION</th>
+                                <th scope="col">ITEM NO.</th>
+                                <th scope="col">UNIT</th>
+                                <th scope="col">ITEM DESC.</th>
                                 <th scope="col">QUANTITY</th>
-                                <th scope="col">UNIT AMOUNT</th>
-                                <th scope="col">UNIT COST</th>
-                                <th scope="col">TOTAL COST</th>
-                                <th scope="col">DESCRIPTION</th>
+                                <th scope="col">BID PRICE</th>
+                                <th scope="col">UNIT PRICE</th>
+                                <th scope="col">TOTAL AMOUNT</th>
                                 <th scope="col"></th>
                             </thead>
                             <tbody>
-                                @foreach ($ics as $dev)
+                                @foreach ($rfq as $r)
                                     <tr>
-                                        <td>{{ $dev->item_desc }}</td>
-                                        <td>{{ $dev->quantity }}</td>
-                                        <td>{{ $dev->unit_amount }}</td>
-                                        <td>{{ $dev->unit_cost }}</td>
-                                        <td>{{ $dev->total_cost }}</td>
-                                        <td>{{ $dev->descprition }}</td>
+                                        <td>{{ $r->item_no }}</td>
+                                        <td>{{ $r->unit }}</td>
+                                        <td>{{ $r->item_desc }}</td>
+                                        <td>{{ $r->quantity }}</td>
+                                        <td>{{ $r->bid_price }}</td>
+                                        <td>{{ $r->unit_price }}</td>
+                                        <td>{{ $r->total_amount }}</td>
                                         <td class="td-actions text-right">
-                                            <a href="{{ route('ics.edit', $dev) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Item">
+                                            <a href="{{ route('rfq.edit', $r) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Item">
                                                 <i class="tim-icons icon-pencil"></i>
                                             </a>
-                                            <form action="{{ route('ics.destroy', $dev) }}" method="post" class="d-inline">
+                                            <form action="{{ route('rfq.destroy', $r) }}" method="post" class="d-inline">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Delete Item" onclick="confirm('Are you sure you want to remove this method? The payment records will not be deleted.') ? this.parentElement.submit() : ''">
@@ -54,10 +56,10 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
+               </div>
                 <div class="card-footer py-4">
                     <nav class="d-flex justify-content-end" aria-label="...">
-                       {{ $ics->links() }}
+                       {{ $rfq->links() }}
                     </nav>
                 </div>
             </div>

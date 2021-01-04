@@ -1,5 +1,4 @@
-@extends('layouts.app', ['page' => 'ICS Supply', 'pageSlug' => 'tin-create', 'section' => 'transactions'])
-
+@extends('layouts.app', ['page' => 'ICS Supply', 'pageSlug' => 'ics-create', 'section' => 'transactions'])
 @section('content')
     <div class="container-fluid mt--7">
         <div class="row">
