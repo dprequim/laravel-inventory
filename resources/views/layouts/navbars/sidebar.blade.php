@@ -93,7 +93,7 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('burs.index') }}">
                     <i class="tim-icons icon-sound-wave"></i>
                     <p>BUR</p>
                 </a>

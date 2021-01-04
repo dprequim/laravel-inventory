@@ -22,5 +22,5 @@ class UtilizationRequest extends Model
     	'payable',
     	'payment',
     	'balance',
-
+    ];
 }
