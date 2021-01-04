@@ -12,7 +12,7 @@
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('par.create') }}" class="btn btn-sm btn-primary">New Method</a>
-                            <a href="{{ 'api/apr/pdf' }}" class="btn btn-sm btn-primary">Print</a>
+                            <a href="{{ 'api/par/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
                 </div>

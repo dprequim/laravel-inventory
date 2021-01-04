@@ -99,7 +99,7 @@
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'porder') class="active " @endif>
                 <a href="{{ route('porder.index') }}">
                     <i class="tim-icons icon-money-coins"></i>
                     <p>Purchase Order</p>

@@ -13,8 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 Route::get('tin/pdf', 'PdfController@tinpdf');
-Route::get('pr/pdf', 'PdfController@prpdf');
+Route::get('purchaserequest/pdf', 'PdfController@prequestpdf');
 Route::get('apr/pdf', 'PdfController@aprpdf');
+Route::get('ics/pdf', 'PdfController@icspdf');
+Route::get('par/pdf', 'PdfController@parpdf');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
