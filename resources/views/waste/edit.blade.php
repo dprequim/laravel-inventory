@@ -57,10 +57,10 @@
                                     <input type="text" name="description" id="input-description" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('description', $waste->description) }}" required>
                                     @include('alerts.feedback', ['field' => 'description'])
                                 </div>
-                                <div class="form-group{{ $errors->has('reciept_no') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-reciept_no">{{ __('Receipt No.') }}</label>
-                                    <input type="text" name="reciept_no" id="input-reciept_no" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('reciept_no', $waste->reciept_no) }}" required>
-                                    @include('alerts.feedback', ['field' => 'reciept_no'])
+                                <div class="form-group{{ $errors->has('receipt_no') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-receipt_no">{{ __('Receipt No') }}</label>
+                                    <input type="text" name="receipt_no" id="input-receipt_no" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('receipt_no', $waste->receipt_no) }}" required>
+                                    @include('alerts.feedback', ['field' => 'receipt_no'])
                                 </div>
                                 <div class="form-group{{ $errors->has('receipt_date') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-receipt_date">{{ __('Receipt Date') }}</label>
