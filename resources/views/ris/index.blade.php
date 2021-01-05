@@ -12,6 +12,7 @@
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('ris.create') }}" class="btn btn-sm btn-primary">Add Slip</a>
+                            <a href="{{ 'api/ris/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
                 </div>

@@ -46,19 +46,23 @@ td {
 
       <table class="tables1">
         <tr>
-          <th scope="col">ITEM No.</th>
-          <th scope="col">ITEM DESCRIP.</th>
-          <th scope="col">QUANTITY.</th>
+          <th scope="col">SUPPLIER.</th>
+          <th scope="col">ADDRESS.</th>
+          <th scope="col">TIN.</th>
+          <th scope="col">P.O. No.</th>
+          <th scope="col">DATE.</th>
+          <th scope="col">PROPERTY No.</th>
           <th scope="col">UNIT.</th>
-          <th scope="col">UNIT PRICE.</th>
         </tr>
             @foreach($data as $key => $item)
         <tr>
-          <td>{{ $item->item_no }}</td>
-          <td>{{ $item->item_desc }}</td>
-          <td>{{ $item->quantity }}</td>
+          <td>{{ $item->supplier }}</td>
+          <td>{{ $item->address }}</td>
+          <td>{{ $item->tin }}</td>
+          <td>{{ $item->po_no }}</td>
+          <td>{{ $item->date }}</td>
+          <td>{{ $item->property_no }}</td>
           <td>{{ $item->unit }}</td>
-          <td>{{ $item->unit_price }}</td>
         </tr>
       @endforeach
     </table>

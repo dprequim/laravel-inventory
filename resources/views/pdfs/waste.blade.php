@@ -49,13 +49,8 @@ td {
           <th scope="col">Fund Cluster.</th>
           <th scope="col">Place of Storage.</th>
           <th scope="col">Date.</th>
-          <th scope="col">Items.</th>
-          <th scope="col">Quantity.</th>
           <th scope="col">UNIT.</th>
           <th scope="col">Description.</th>
-          <th scope="col">Receipt No..</th>
-          <th scope="col">Receipt Date.</th>
-          <th scope="col">Receipt Amount.</th>
           <th scope="col"></th> 
         </tr>
             @foreach($data as $key => $item)
@@ -63,13 +58,8 @@ td {
           <td>{{ $item->fund_cluster }}</td>
           <td>{{ $item->storage_place }}</td>
           <td>{{ $item->date }}</td>
-          <td>{{ $item->items }}</td>
-          <td>{{ $item->quantity }}</td>
           <td>{{ $item->unit }}</td>
           <td>{{ $item->description }}</td>
-          <td>{{ $item->receipt_no }}</td>
-          <td>{{ $item->receipt_date }}</td>
-          <td>{{ $item->receipt_amount }}</td>
         </tr>
       @endforeach
     </table>

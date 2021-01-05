@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'New TIN', 'pageSlug' => 'routines-create', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => 'New Routine Slip', 'pageSlug' => 'routines-create', 'section' => 'transactions'])
 
 @section('content')
     <div class="container-fluid mt--7">
@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">New TIN</h3>
+                                <h3 class="mb-0">New Routine Slip</h3>
                             </div>
                             <div class="col-4 text-right">
                                 <a href="{{ route('routines.index') }}" class="btn btn-sm btn-primary">Back to List</a>
