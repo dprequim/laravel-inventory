@@ -34,7 +34,6 @@ Route::group(['middleware' => 'auth'], function () {
         'ics' => 'IcsController',
         'burs' => 'BursController',
         'purchaserequest' => 'PrController',
-
         'rfq' => 'RfqController',
         'cenrr' => 'CenrrController',
         'dv' => 'DvController',
@@ -43,8 +42,13 @@ Route::group(['middleware' => 'auth'], function () {
         'aba' => 'AbaController',
         'porder' => 'PoController',
         'waste' => 'WasteController',
+<<<<<<< HEAD
         'ris' => 'RisController',
         'obr' => 'ObrController',
+=======
+        'ptr' => 'PtrController',
+        'rep' => 'RepController',
+>>>>>>> 196f39d523a49217983fea1afbeeca55798eff2d
     ]);
     
     Route::resource('transactions', 'TransactionController')->except(['create', 'show']);

@@ -12,6 +12,7 @@
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('burs.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ 'api/burs/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
                 </div>

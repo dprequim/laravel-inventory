@@ -17,6 +17,11 @@ Route::get('purchaserequest/pdf', 'PdfController@prequestpdf');
 Route::get('apr/pdf', 'PdfController@aprpdf');
 Route::get('ics/pdf', 'PdfController@icspdf');
 Route::get('par/pdf', 'PdfController@parpdf');
+Route::get('waste/pdf', 'PdfController@wastepdf');
+Route::get('burs/pdf', 'PdfController@burspdf');
+Route::get('cenrr/pdf', 'PdfController@cenrrpdf');
+Route::get('dv/pdf', 'PdfController@dvpdf');
+Route::get('rfq/pdf', 'PdfController@rfqpdf');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

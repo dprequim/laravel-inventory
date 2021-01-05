@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'Waste Material', 'pageSlug' => 'waste', 'section' => 'waste'])
+@extends('layouts.app', ['page' => 'ptr', 'pageSlug' => 'ptr', 'section' => 'ptr'])
 
 @section('content')
     @include('alerts.success')
@@ -8,11 +8,11 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Waste Material Report</h4>
+                            <h4 class="card-title">Transfer Report</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('waste.create') }}" class="btn btn-sm btn-primary">New Method</a>
-                            <a href="{{ 'api/waste/pdf' }}" class="btn btn-sm btn-primary">Print</a>
+                            <a href="{{ route('ptr.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ 'api/ptr/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
                 </div>
@@ -21,26 +21,28 @@
                     <div class="">
                         <table class="table tablesorter " id="">
                             <thead class=" text-primary">
-                                <th scope="col">Fund Cluster.</th>
-                                <th scope="col">Place of Storage.</th>
-                                <th scope="col">Date.</th>
-                                <th scope="col">UNIT.</th>
-                                <th scope="col">Description.</th>
+                                <th scope="col">FUND CLUSTER</th>
+                                <th scope="col">FROM OFFICER</th>
+                                <th scope="col">TO OFFICER</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">TRANSFER TYPE</th>
+                                <th scope="col">AQUIRED DATE</th>
                                 <th scope="col"></th>
                             </thead>
                             <tbody>
-                                @foreach ($waste as $item)
+                                @foreach ($ptr as $pt)
                                     <tr>
-                                        <td>{{ $item->fund_cluster }}</td>
-                                        <td>{{ $item->storage_place }}</td>
-                                        <td>{{ $item->date }}</td>
-                                        <td>{{ $item->unit }}</td>
-                                        <td>{{ $item->description }}</td>
+                                        <td>{{ $pt->fund_cluster }}</td>
+                                        <td>{{ $pt->from_officer }}</td>
+                                        <td>{{ $pt->to_officer }}</td>
+                                        <td>{{ $pt->date }}</td>
+                                        <td>{{ $pt->transfer_type }}</td>
+                                        <td>{{ $pt->acquired_date }}</td>
                                         <td class="td-actions text-right">
-                                            <a href="{{ route('waste.edit', $item) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Item">
+                                            <a href="{{ route('ptr.edit', $pt) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Item">
                                                 <i class="tim-icons icon-pencil"></i>
                                             </a>
-                                            <form action="{{ route('waste.destroy', $item) }}" method="post" class="d-inline">
+                                            <form action="{{ route('ptr.destroy', $pt) }}" method="post" class="d-inline">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Delete Item" onclick="confirm('Are you sure you want to remove this method? The payment records will not be deleted.') ? this.parentElement.submit() : ''">
@@ -56,10 +58,11 @@
                </div>
                 <div class="card-footer py-4">
                     <nav class="d-flex justify-content-end" aria-label="...">
-                       {{ $waste->links() }}
+                       {{ $ptr->links() }}
                     </nav>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+ 
