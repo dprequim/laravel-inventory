@@ -26,4 +26,5 @@ class ObligationStatus extends Model
     	'payable',
     	'payment',
     	'balance',
+    ];
 }

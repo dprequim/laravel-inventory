@@ -65,7 +65,7 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('ris.index') }}">
                     <i class="tim-icons icon-single-copy-04"></i>
                     <p>RIS</p>
                 </a>
@@ -107,7 +107,7 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('obr.index') }}">
                     <i class="tim-icons icon-heart-2"></i>
                     <p>OBR</p>
                 </a>
