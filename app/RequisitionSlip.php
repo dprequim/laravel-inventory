@@ -12,4 +12,5 @@ class RequisitionSlip extends Model
     	'issue',
     	'remarks',
     	'unit_price'
+    ];
 }

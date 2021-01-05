@@ -11,7 +11,7 @@
                             <h4 class="card-title">Transfer Report</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('ptr.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ route('ptr.create') }}" class="btn btn-sm btn-primary">Add Report</a>
                             <a href="{{ 'api/ptr/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
