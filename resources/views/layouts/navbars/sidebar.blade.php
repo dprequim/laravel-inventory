@@ -113,14 +113,14 @@
                 </a>
             </li>
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('ptr.index') }}">
                     <i class="tim-icons icon-credit-card"></i>
                     <p>PTR</p>
                 </a>
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
+                <a href="{{ route('rep.index') }}">
                     <i class="tim-icons icon-settings"></i>
                     <p>Pre-Repair</p>
                 </a>

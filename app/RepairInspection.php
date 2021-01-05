@@ -32,5 +32,5 @@ class RepairInspection extends Model
     	'postrepair_finding',
     	'inspected_by',
     	'postrepair_date',
-
+];
 }

@@ -22,4 +22,5 @@ class TransferReport extends Model
     	'printed_name',
     	'designation',
     	'date',
+];
 }
