@@ -13,7 +13,7 @@
                             
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('dv.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ route('dv.create') }}" class="btn btn-sm btn-primary">Add Voucher</a>
                             <a href="{{ 'api/dv/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>

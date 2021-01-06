@@ -11,7 +11,7 @@
                             <h4 class="card-title">Requisition Slip</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('ris.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ route('ris.create') }}" class="btn btn-sm btn-primary">Add Slip</a>
                         </div>
                     </div>
                 </div>
