@@ -8,11 +8,9 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-<<<<<<< HEAD
-                            <h4 class="card-title">DISBURSEMENT VOUCHER</h4>
-=======
+
                             <h4 class="card-title">Disbursement Voucher</h4>
->>>>>>> 196f39d523a49217983fea1afbeeca55798eff2d
+                            
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('dv.create') }}" class="btn btn-sm btn-primary">New Method</a>
