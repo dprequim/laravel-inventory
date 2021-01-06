@@ -42,7 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
         'aba' => 'AbaController',
         'porder' => 'PoController',
         'waste' => 'WasteController',
-<<<<<<< HEAD
+
         'ris' => 'RisController',
         'obr' => 'ObrController',
 =======
