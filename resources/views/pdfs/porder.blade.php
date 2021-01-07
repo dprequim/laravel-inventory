@@ -17,7 +17,7 @@ thead {
 
 th,
 td {
-  border: 2px solid #000000;
+  border: 0.5px solid #000000;
   padding: 2px;
 }
 .tables1{
@@ -58,6 +58,14 @@ td {
           <br>PROPERTY No.</th>
           @endforeach
         </tr>
+      </table>
+      <table class="tables1">
+        <tr>
+          @foreach($data as $key => $item)          
+          <th scope="col" style="text-align: left;">Gentlemen:
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $item->gentlemen}}
+           @endforeach 
+        </tr>      
       </table>
       <table class="tables2">
         <tr>
