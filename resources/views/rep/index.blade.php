@@ -11,7 +11,7 @@
                             <h4 class="card-title">Repair Inspection</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('rep.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ route('rep.create') }}" class="btn btn-sm btn-primary">Add Inspection</a>
                             <a href="{{ 'api/rep/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>

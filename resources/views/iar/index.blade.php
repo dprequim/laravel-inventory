@@ -11,7 +11,7 @@
                             <h4 class="card-title">INSPECTION AND ACCEPTANCE REPORT</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('iar.create') }}" class="btn btn-sm btn-primary">New Method</a>
+                            <a href="{{ route('iar.create') }}" class="btn btn-sm btn-primary">Add Report</a>
                             <a href="{{ 'api/apr/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
