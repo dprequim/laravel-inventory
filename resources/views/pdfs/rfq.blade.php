@@ -56,13 +56,13 @@ td {
         </tr>
             @foreach($data as $key => $item)
         <tr>
-          <td>{{ $r->item_no }}</td>
-          <td>{{ $r->unit }}</td>
-          <td>{{ $r->item_desc }}</td>
-          <td>{{ $r->quantity }}</td>
-          <td>{{ $r->bid_price }}</td>
-          <td>{{ $r->unit_price }}</td>
-          <td>{{ $r->total_amount }}</td>
+          <td>{{ $item->item_no }}</td>
+          <td>{{ $item->unit }}</td>
+          <td>{{ $item->item_desc }}</td>
+          <td>{{ $item->quantity }}</td>
+          <td>{{ $item->bid_price }}</td>
+          <td>{{ $item->unit_price }}</td>
+          <td>{{ $item->total_amount }}</td>
         </tr>
       @endforeach
     </table>

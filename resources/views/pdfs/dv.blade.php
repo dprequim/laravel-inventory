@@ -54,11 +54,11 @@ td {
         </tr>
             @foreach($data as $key => $item)
         <tr>
-          <td>{{ $dis->fund_cluster }}</td>
-          <td>{{ $dis->employee_no }}</td>
-          <td>{{ $dis->bur_no }}</td>
-          <td>{{ $dis->address }}</td>
-          <td>{{ $dis->date }}</td>
+          <td>{{ $item->fund_cluster }}</td>
+          <td>{{ $item->employee_no }}</td>
+          <td>{{ $item->bur_no }}</td>
+          <td>{{ $item->address }}</td>
+          <td>{{ $item->date }}</td>
         </tr>
       @endforeach
     </table>

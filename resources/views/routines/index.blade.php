@@ -12,6 +12,7 @@
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('routines.create') }}" class="btn btn-sm btn-primary">Add Slip</a>
+                            <a href="{{ 'api/route/pdf' }}" class="btn btn-sm btn-primary">Print</a>
                         </div>
                     </div>
                 </div>
@@ -22,7 +23,7 @@
                             <thead class=" text-primary">
                                 <th scope="col">Full Name</th>
                                 <th scope="col">Purpose</th>
-                                <th scope="col">Attachmens</th>
+                                <th scope="col">Attachments</th>
                                 <th scope="col">Date Received</th>
                                 <th scope="col">Date Released</th>
                                 <th scope="col"></th>

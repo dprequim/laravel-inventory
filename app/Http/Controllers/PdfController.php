@@ -7,6 +7,7 @@ use PDF;
 use App\Tin;
 use App\Apr;
 use App\PurchaseRequest;
+use App\PurchasedOrder;
 use App\CustodianSlipSupply;
 use App\ParSupply;
 use App\MaterialReports;
@@ -14,6 +15,13 @@ use App\UtilizationRequest;
 use App\CertificationOfExpenses;
 use App\DisbursementVoucher;
 use App\RequestForQuotation;
+use App\RequisitionSlip;
+use App\ObligationStatus;
+use App\TransferReport;
+use App\RepairInspection;
+use App\inspectionReport;
+use App\RoutineSlip;
+use App\BidsAndAwards;
 class PdfController extends Controller
 {
     public function tinpdf()
@@ -46,6 +54,12 @@ class PdfController extends Controller
         $pdf = PDF::loadView('pdfs.par' , compact('data'));
         return $pdf->stream('Property Acknowledgement Receipt.pdf');
     }
+    public function porderpdf()
+    {   
+        $data = PurchasedOrder::get();
+        $pdf = PDF::loadView('pdfs.porder' , compact('data'));
+        return $pdf->stream('Purchased Order.pdf');
+    }
     public function wastepdf()
     {   
         $data = MaterialReports::get();
@@ -76,4 +90,47 @@ class PdfController extends Controller
         $pdf = PDF::loadView('pdfs.rfq' , compact('data'));
         return $pdf->stream('Request For Quotation.pdf');
     }
+    public function rispdf()
+    {   
+        $data = RequisitionSlip::get();
+        $pdf = PDF::loadView('pdfs.ris' , compact('data'));
+        return $pdf->stream('Requisition Slip.pdf');
+    }
+    public function obrpdf()
+    {   
+        $data = ObligationStatus::get();
+        $pdf = PDF::loadView('pdfs.obr' , compact('data'));
+        return $pdf->stream('OBLIGATION REQUEST AND STATUS.pdf');
+    }
+    public function ptrpdf()
+    {   
+        $data = TransferReport::get();
+        $pdf = PDF::loadView('pdfs.ptr' , compact('data'));
+        return $pdf->stream('Transfer Report.pdf');
+    }
+    public function reppdf()
+    {   
+        $data = RepairInspection::get();
+        $pdf = PDF::loadView('pdfs.rep' , compact('data'));
+        return $pdf->stream('Repair Inspection.pdf');
+    }
+    public function iarpdf()
+    {   
+        $data = inspectionReport::get();
+        $pdf = PDF::loadView('pdfs.iar' , compact('data'));
+        return $pdf->stream('INSPECTION AND ACCEPTANCE REPORT.pdf');
+    }
+    public function routepdf()
+    {   
+        $data = RoutineSlip::get();
+        $pdf = PDF::loadView('pdfs.route' , compact('data'));
+        return $pdf->stream('Routine Slip.pdf');
+    }
+    public function abspdf()
+    {   
+        $data = BidsAndAwards::get();
+        $pdf = PDF::loadView('pdfs.abs' , compact('data'));
+        return $pdf->stream('Bids And Awards.pdf');
+    }
+    
 }

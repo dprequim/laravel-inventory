@@ -55,12 +55,12 @@ td {
         </tr>
             @foreach($data as $key => $item)
         <tr>
-          <td>{{ $ted->serial_no }}</td>
-          <td>{{ $ted->date }}</td>
-          <td>{{ $ted->funcluster }}</td>
-          <td>{{ $ted->responsibility_center }}</td>
-          <td>{{ $ted->particulars }}</td>
-          <td>{{ $ted->mfo }}</td>
+          <td>{{ $item->serial_no }}</td>
+          <td>{{ $item->date }}</td>
+          <td>{{ $item->funcluster }}</td>
+          <td>{{ $item->responsibility_center }}</td>
+          <td>{{ $item->particulars }}</td>
+          <td>{{ $item->mfo }}</td>
         </tr>
       @endforeach
     </table>

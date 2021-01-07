@@ -55,12 +55,12 @@ td {
         </tr>
             @foreach($data as $key => $item)
         <tr>
-          <td>{{ $ce->employee_name }}</td>
-          <td>{{ $ce->employee_no }}</td>
-          <td>{{ $ce->office }}</td>
-          <td>{{ $ce->division }}</td>
-          <td>{{ $ce->date }}</td>
-          <td>{{ $ce->unit_amount }}</td>
+          <td>{{ $item->employee_name }}</td>
+          <td>{{ $item->employee_no }}</td>
+          <td>{{ $item->office }}</td>
+          <td>{{ $item->division }}</td>
+          <td>{{ $item->date }}</td>
+          <td>{{ $item->unit_amount }}</td>
         </tr>
       @endforeach
     </table>

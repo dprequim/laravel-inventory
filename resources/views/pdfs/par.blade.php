@@ -52,7 +52,6 @@ td {
           <th scope="col">PROPERTY No.</th>
           <th scope="col">DATE AQUIRED.</th>
           <th scope="col">AMOUNT.</th>
-          <th scope="col"></th>
         </tr>
             @foreach($data as $key => $item)
         <tr>
