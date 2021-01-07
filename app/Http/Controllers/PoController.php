@@ -79,7 +79,7 @@ class PoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, porder $porder)
+    public function update(Request $request, PurchasedOrder $porder)
     {
         $porder->update($request->all());
 
