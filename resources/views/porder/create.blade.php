@@ -34,6 +34,36 @@
                                     <input type="text" name="tin" id="input-tin" class="form-control form-control-alternative{{ $errors->has('tin') ? ' is-invalid' : '' }}" value="{{ old('tin') }}" required>
                                     @include('alerts.feedback', ['field' => 'tin'])
                                 </div>
+                                <div class="form-group{{ $errors->has('procurement') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-procurement">PROCUREMENT</label>
+                                    <input type="text" name="procurement" id="input-procurement" class="form-control form-control-alternative{{ $errors->has('procurement') ? ' is-invalid' : '' }}" value="{{ old('procurement') }}" required>
+                                    @include('alerts.feedback', ['field' => 'procurement'])
+                                </div>
+                                <div class="form-group{{ $errors->has('gentlemen') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-gentlemen">GENTLEMEN.</label>
+                                    <input type="text" name="gentlemen" id="input-gentlemen" class="form-control form-control-alternative{{ $errors->has('gentlemen') ? ' is-invalid' : '' }}" value="{{ old('gentlemen') }}" required>
+                                    @include('alerts.feedback', ['field' => 'gentlemen'])
+                                </div>
+                                <div class="form-group{{ $errors->has('place_delivery') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-place_delivery">PLACE OF DELIVERY.</label>
+                                    <input type="text" name="place_delivery" id="input-place_delivery" class="form-control form-control-alternative{{ $errors->has('place_delivery') ? ' is-invalid' : '' }}" value="{{ old('place_delivery') }}" required>
+                                    @include('alerts.feedback', ['field' => 'place_delivery'])
+                                </div>
+                                <div class="form-group{{ $errors->has('date_delivery') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-date_delivery">DATE OF DELIVERY.</label>
+                                    <input type="text" name="date_delivery" id="input-date_delivery" class="form-control form-control-alternative{{ $errors->has('date_delivery') ? ' is-invalid' : '' }}" value="{{ old('date_delivery') }}" required>
+                                    @include('alerts.feedback', ['field' => 'date_delivery'])
+                                </div>
+                                <div class="form-group{{ $errors->has('delivery_term') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-delivery_term">DELIVERY TERM.</label>
+                                    <input type="text" name="delivery_term" id="input-delivery_term" class="form-control form-control-alternative{{ $errors->has('delivery_term') ? ' is-invalid' : '' }}" value="{{ old('delivery_term') }}" required>
+                                    @include('alerts.feedback', ['field' => 'delivery_term'])
+                                </div>
+                                <div class="form-group{{ $errors->has('payment_term') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-payment_term">PAYMENT TERM.</label>
+                                    <input type="text" name="payment_term" id="input-payment_term" class="form-control form-control-alternative{{ $errors->has('payment_term') ? ' is-invalid' : '' }}" value="{{ old('payment_term') }}" required>
+                                    @include('alerts.feedback', ['field' => 'payment_term'])
+                                </div>
                                 <div class="form-group{{ $errors->has('po_no') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-po_no">PO No.</label>
                                     <input type="text" name="po_no" id="input-po_no" class="form-control form-control-alternative{{ $errors->has('po_no') ? ' is-invalid' : '' }}" value="{{ old('po_no') }}" required>

@@ -18,6 +18,12 @@ class CreatePurchasedOrdersTable extends Migration
             $table->string('supplier');
             $table->string('address');
             $table->string('tin');
+            $table->string('procurement');
+            $table->string('gentlemen');
+            $table->string('place_delivery');
+            $table->string('date_delivery');
+            $table->string('delivery_term');
+            $table->string('payment_term');
             $table->string('po_no');
             $table->string('date');
             $table->string('property_no');
