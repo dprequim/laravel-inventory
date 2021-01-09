@@ -20,25 +20,55 @@
                             @csrf
                             @method('put')
 
-                            <h6 class="heading-small text-muted mb-4">{{ __('Request information') }}</h6>
+                            <h6 class="heading-small text-muted mb-4">{{ __('Purchased Order information') }}</h6>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('supplier') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-supplier">{{ __('Name') }}</label>
+                                    <label class="form-control-label" for="input-supplier">{{ __('Supplier') }}</label>
                                     <input type="text" name="supplier" id="input-supplier" class="form-control form-control-alternative{{ $errors->has('supplier') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('supplier', $porder->supplier) }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'supplier'])
                                 </div>
                                 <div class="form-group{{ $errors->has('address') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-address">{{ __('Description') }}</label>
+                                    <label class="form-control-label" for="input-address">{{ __('Address') }}</label>
                                     <input type="text" name="address" id="input-address" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('address', $porder->address) }}" required>
                                     @include('alerts.feedback', ['field' => 'address'])
                                 </div>
                                 <div class="form-group{{ $errors->has('tin') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-tin">{{ __('Description') }}</label>
+                                    <label class="form-control-label" for="input-tin">{{ __('Tin') }}</label>
                                     <input type="text" name="tin" id="input-tin" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('tin', $porder->tin) }}" required>
                                     @include('alerts.feedback', ['field' => 'tin'])
                                 </div>
+                                <div class="form-group{{ $errors->has('procurement') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-procurement">{{ __('Procurement') }}</label>
+                                    <input type="text" name="procurement" id="input-procurement" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('procurement', $porder->procurement) }}" required>
+                                    @include('alerts.feedback', ['field' => 'po_no'])
+                                </div>
+                                <div class="form-group{{ $errors->has('gentlemen') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-gentlemen">{{ __('Gentlemen') }}</label>
+                                    <input type="text" name="gentlemen" id="input-gentlemen" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('gentlemen', $porder->gentlemen) }}" required>
+                                    @include('alerts.feedback', ['field' => 'gentlemen'])
+                                </div>
+                                <div class="form-group{{ $errors->has('place_delivery') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-place_delivery">{{ __('Place of Delivery') }}</label>
+                                    <input type="text" name="place_delivery" id="input-place_delivery" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('place_delivery', $porder->place_delivery) }}" required>
+                                    @include('alerts.feedback', ['field' => 'place_delivery'])
+                                </div>
+                                <div class="form-group{{ $errors->has('date_delivery') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-date_delivery">{{ __('Date of Delivery') }}</label>
+                                    <input type="text" name="date_delivery" id="input-date_delivery" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('date_delivery', $porder->date_delivery) }}" required>
+                                    @include('alerts.feedback', ['field' => 'date_delivery'])
+                                </div>
+                                <div class="form-group{{ $errors->has('delivery_term') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-delivery_term">{{ __('Delivery Term') }}</label>
+                                    <input type="text" name="delivery_term" id="input-delivery_term" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('delivery_term', $porder->delivery_term) }}" required>
+                                    @include('alerts.feedback', ['field' => 'delivery_term'])
+                                </div>
+                                <div class="form-group{{ $errors->has('payment_term') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-payment_term">{{ __('Payment Term') }}</label>
+                                    <input type="text" name="payment_term" id="input-payment_term" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('payment_term', $porder->payment_term) }}" required>
+                                    @include('alerts.feedback', ['field' => 'payment_term'])
+                                </div>
                                 <div class="form-group{{ $errors->has('po_no') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-po_no">{{ __('Description') }}</label>
+                                    <label class="form-control-label" for="input-po_no">{{ __('PO No.') }}</label>
                                     <input type="text" name="po_no" id="input-po_no" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}" value="{{ old('po_no', $porder->po_no) }}" required>
                                     @include('alerts.feedback', ['field' => 'po_no'])
                                 </div>
