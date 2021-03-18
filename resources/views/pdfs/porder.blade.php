@@ -323,7 +323,7 @@ body {margin-top: 0px;margin-left: 0px;}
   <TD class="tr8 td15"><P class="p6 ft14">&nbsp;</P></TD>
   <TD class="tr8 td16"><P class="p6 ft14">&nbsp;</P></TD>
   <TD class="tr8 td17"><P class="p6 ft14">&nbsp;</P></TD>
-  <TD colspan=4 class="tr8 td53"><P class="p7 ft15">Total Amount . . . . . . . . . . .</P></TD>
+  <TD colspan=4 class="tr8 td53"><P class="p7 ft15">Total Amount . . . . . . . . . .</P></TD>
   <TD class="tr8 td21"><P class="p20 ft15">p</P></TD>
 </TR>
 <TR>
