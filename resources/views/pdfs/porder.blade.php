@@ -7,7 +7,8 @@
 <META name="author" content="Angelica Mae Betonio">
 <STYLE type="text/css">
 
-body {margin-top: 0px;margin-left: 0px;}
+
+  body {margin-top: 0px;margin-left: 0px;}
 
 #page_1 {position:relative; overflow: hidden;margin: 68px 0px 100px 43px;padding: 0px;border: none;width: 751px;height: 955px;}
 
