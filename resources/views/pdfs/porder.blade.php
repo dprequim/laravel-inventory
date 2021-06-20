@@ -2,6 +2,9 @@
 <HEAD>
 <TITLE>pdf-html</TITLE>
 <STYLE type="text/css">
+.page-break {
+ page-break-after: always;
+ }
 body {margin-top: 0px;margin-left: 0px;}
 #page_1 {height: 100%;}
 .ft0{font: bold 21px 'Times New Roman';line-height: 24px;}
@@ -132,6 +135,7 @@ body {margin-top: 0px;margin-left: 0px;}
 
 <BODY>
 <DIV id="page_1">
+  @foreach($data as $key => $item)
 
 
 <P class="p0 ft0" align="left">PURCHASE ORDER</P>
@@ -140,7 +144,6 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p3 ft1" align="left">Obrero Campus, Bo, Obrero, Davao City</P>
 <TABLE cellpadding=0 cellspacing=0 class="t0">
 <TR>
-  @foreach($data as $key => $item)
   <TD class="tr0 td0"><P class="p4 ft3">Supplier :</P></TD>
   <TD class="tr0 td1"><P class="p5 ft3">{{ $item->supplier}}</P></TD>
   <TD class="tr0 td2"><P class="p6 ft4">&nbsp;</P></TD>
@@ -654,9 +657,10 @@ body {margin-top: 0px;margin-left: 0px;}
   <TD class="tr1 td30"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr1 td31"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr1 td32"><P class="p6 ft4">&nbsp;</P></TD>
-  @endforeach
 </TR>
 </TABLE>
+<div class="page-break"></div>
+  @endforeach
 </DIV>
 </BODY>
 </HTML>
