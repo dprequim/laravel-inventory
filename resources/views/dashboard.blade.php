@@ -7,8 +7,8 @@
                 <div class="card-header ">
                     <div class="row">
                         <div class="col-sm-6 text-left">
-                            <h5 class="card-category">Total sales</h5>
-                            <h2 class="card-title">Annual yield</h2>
+                            <h2 class="card-category">University of Southeastern Philippines</h2>
+                            <h3 class="card-title">College of Information and Computing</h3>
                         </div>
                         <div class="col-sm-6">
                             <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
@@ -50,7 +50,7 @@
         <div class="col-lg-4">
             <div class="card card-chart">
                 <div class="card-header">
-                    <h5 class="card-category">Last Month Income</h5>
+                    <h5 class="card-category">Last Month's Record</h5>
                     <h3 class="card-title"><i class="tim-icons icon-money-coins text-primary"></i>{{ format_money($semesterincomes) }}</h3>
                 </div>
                 <div class="card-body">
@@ -63,7 +63,7 @@
         <div class="col-lg-4">
             <div class="card card-chart">
                 <div class="card-header">
-                    <h5 class="card-category">Monthly Balance</h5>
+                    <h5 class="card-category">Monthly Record</h5>
                     <h3 class="card-title"><i class="tim-icons icon-bank text-info"></i> {{ format_money($monthlybalance) }}</h3>
                 </div>
                 <div class="card-body">
