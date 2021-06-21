@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-8">
 
-                            <h4 class="card-title">Disbursement Voucher</h4>
+                            <h4 class="card-title"><strong>Disbursement Voucher</strong></h4>
                             
                         </div>
                         <div class="col-4 text-right">

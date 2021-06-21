@@ -7,6 +7,7 @@
                 <div class="card-header ">
                     <div class="row">
                         <div class="col-sm-6 text-left">
+
                             <h2 class="card-category">University of Southeastern Philippines</h2>
                             <h3 class="card-title">College of Information and Computing</h3>
                         </div>

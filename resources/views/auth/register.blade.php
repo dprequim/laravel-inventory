@@ -5,8 +5,8 @@
         <div class="col-md-7 ml-auto mr-auto">
             <div class="card card-register card-white">
                 <div class="card-header">
-                    <img class="card-img" src="{{ asset('assets') }}/img/card-primary.png" alt="Card image">
-                    <h4 class="card-title">Register</h4>
+                    <img class="card-img" src="{{ asset('assets') }}/img/regbar-primary.png" alt="Card image">
+                    <h4 class="card-title"> . </h4>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf

@@ -8,7 +8,7 @@
             <div class="card card-login card-white">
                 <div class="card-header">
                     <img src="{{ asset('assets') }}/img/card-primary.png" alt="">
-                    <h1 class="card-title">Login</h1>
+                    <h1 class="card-title"> . </h1>
                 </div>
                 <div class="card-body">
                     <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
