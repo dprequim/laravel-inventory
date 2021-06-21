@@ -143,6 +143,7 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p2 ft2" align="left">UNIVERSITY OF SOUTHEASTERN PHILIPPINES</P>
 <P class="p3 ft1" align="left">Obrero Campus, Bo, Obrero, Davao City</P>
 <TABLE cellpadding=0 cellspacing=0 class="t0">
+
 <TR>
   <TD class="tr0 td0"><P class="p4 ft3">Supplier :</P></TD>
   <TD class="tr0 td1"><P class="p5 ft3">{{ $item->supplier}}</P></TD>
