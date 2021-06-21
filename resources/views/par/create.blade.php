@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">PROPERTY ACKNOWLEDGMENT RECEIPT</h3>
+                                <h3 class="mb-0"><strong> Property Acknoledgement Receipt </strong> </h3>
                             </div>
                             <div class="col-4 text-right">
                                 <a href="{{ route('par.index') }}" class="btn btn-sm btn-primary">Back to List</a>

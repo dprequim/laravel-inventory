@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">PURCHASE ORDER</h4>
+                            <h4 class="card-title"><strong>Purchase Order</strong></h4>
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('porder.create') }}" class="btn btn-sm btn-primary">Add Order</a>
@@ -58,11 +58,6 @@
                         </table>
                     </div>
                </div>
-                <div class="card-footer py-4">
-                    <nav class="d-flex justify-content-end" aria-label="...">
-                       {{ $porder->links() }}
-                    </nav>
-                </div>
             </div>
         </div>
     </div>

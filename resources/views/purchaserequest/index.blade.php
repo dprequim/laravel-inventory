@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title">Purchase Request</h4>
+                            <h4 class="card-title"><strong>Purchase Request</strong></h4>
                         </div>
                         <div class="col-4 text-right">
                             <a href="{{ route('purchaserequest.create') }}" class="btn btn-sm btn-primary">Add Request</a>
