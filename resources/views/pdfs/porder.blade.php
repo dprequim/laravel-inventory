@@ -2,12 +2,11 @@
 <HEAD>
 <TITLE>pdf-html</TITLE>
 <STYLE type="text/css">
-
+.page-break {
+ page-break-after: always;
+ }
 body {margin-top: 0px;margin-left: 0px;}
-
 #page_1 {height: 100%;}
-
-
 .ft0{font: bold 21px 'Times New Roman';line-height: 24px;}
 .ft1{font: 15px 'Times New Roman';line-height: 17px;}
 .ft2{font: bold 15px 'Times New Roman';line-height: 17px;}
@@ -25,7 +24,6 @@ body {margin-top: 0px;margin-left: 0px;}
 .ft14{font: 13px 'Times New Roman';text-decoration: underline;line-height: 15px;}
 .ft15{font: bold 13px 'Times New Roman';line-height: 15px;}
 .ft16{font: 12px 'Times New Roman';line-height: 15px;}
-
 .p0{padding-left: 235px;margin-top: 0px;margin-bottom: 0px;}
 .p1{padding-left: 250px;margin-top: 51px;margin-bottom: 0px;}
 .p2{padding-left: 160px;margin-top: 14px;margin-bottom: 0px;}
@@ -56,7 +54,6 @@ body {margin-top: 0px;margin-left: 0px;}
 .p27{text-align: left;padding-left: 65px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p28{text-align: center;padding-right: 51px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
 .p29{text-align: center;padding-right: 45px;margin-top: 0px;margin-bottom: 0px;white-space: nowrap;}
-
 .td0{border-left: #000000 1px solid;border-top: #000000 1px solid;padding: 0px;margin: 0px;width: 72px;vertical-align: bottom;}
 .td1{border-top: #000000 1px solid;padding: 0px;margin: 0px;width: 52px;vertical-align: bottom;}
 .td2{border-top: #000000 1px solid;padding: 0px;margin: 0px;width: 41px;vertical-align: bottom;}
@@ -119,7 +116,6 @@ body {margin-top: 0px;margin-left: 0px;}
 .td59{border-right: #000000 1px solid;padding: 0px;margin: 0px;width: 342px;vertical-align: bottom;}
 .td60{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 180px;vertical-align: bottom;}
 .td61{border-right: #000000 1px solid;border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 20px;vertical-align: bottom;}
-
 .tr0{height: 17px;}
 .tr1{height: 15px;}
 .tr2{height: 16px;}
@@ -133,14 +129,13 @@ body {margin-top: 0px;margin-left: 0px;}
 .tr10{height: 29px;}
 .tr11{height: 31px;}
 .tr12{height: 30px;}
-
 .t0{width: 724px;margin-top: 41px;font: 13px 'Times New Roman';}
-
 </STYLE>
 </HEAD>
 
 <BODY>
 <DIV id="page_1">
+  @foreach($data as $key => $item)
 
 
 <P class="p0 ft0" align="left">PURCHASE ORDER</P>
@@ -148,8 +143,8 @@ body {margin-top: 0px;margin-left: 0px;}
 <P class="p2 ft2" align="left">UNIVERSITY OF SOUTHEASTERN PHILIPPINES</P>
 <P class="p3 ft1" align="left">Obrero Campus, Bo, Obrero, Davao City</P>
 <TABLE cellpadding=0 cellspacing=0 class="t0">
+
 <TR>
-  @foreach($data as $key => $item)
   <TD class="tr0 td0"><P class="p4 ft3">Supplier :</P></TD>
   <TD class="tr0 td1"><P class="p5 ft3">{{ $item->supplier}}</P></TD>
   <TD class="tr0 td2"><P class="p6 ft4">&nbsp;</P></TD>
@@ -487,10 +482,10 @@ body {margin-top: 0px;margin-left: 0px;}
   <TD class="tr0 td16"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr0 td17"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr0 td33"><P class="p6 ft4">&nbsp;</P></TD>
-  <TD class="tr0 td34"><P class="p18 ft9">p</P></TD>
+  <TD class="tr0 td34"></TD>
   <TD class="tr0 td19"><P class="p6 ft4">&nbsp;</P></TD>
-  <TD class="tr0 td20"><P class="p19 ft9">p</P></TD>
-  <TD class="tr0 td21"><P class="p16 ft9">p</P></TD>
+  <TD class="tr0 td20"></TD>
+  <TD class="tr0 td21"></TD>
 </TR>
 <TR>
   <TD class="tr9 td11"><P class="p6 ft4">&nbsp;</P></TD>
@@ -501,10 +496,10 @@ body {margin-top: 0px;margin-left: 0px;}
   <TD class="tr9 td16"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr9 td17"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr9 td33"><P class="p6 ft4">&nbsp;</P></TD>
-  <TD class="tr9 td34"><P class="p18 ft9">p</P></TD>
+  <TD class="tr9 td34"></TD>
   <TD class="tr9 td19"><P class="p6 ft4">&nbsp;</P></TD>
-  <TD class="tr9 td20"><P class="p19 ft9">p</P></TD>
-  <TD class="tr9 td21"><P class="p16 ft9">p</P></TD>
+  <TD class="tr9 td20"></TD>
+  <TD class="tr9 td21"></TD>
 </TR>
 <TR>
   <TD colspan=4 class="tr7 td51"><P class="p6 ft12">&nbsp;</P></TD>
@@ -546,7 +541,7 @@ body {margin-top: 0px;margin-left: 0px;}
   <TD class="tr11 td14"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr11 td15"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr11 td16"><P class="p6 ft4">&nbsp;</P></TD>
-  <TD colspan=3 class="tr11 td54"><P class="p6 ft3">Very truly yours</P></TD>
+  <TD colspan=3 class="tr11 td54">Very truly yours</P></TD>
   <TD class="tr11 td19"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr11 td20"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr11 td21"><P class="p6 ft4">&nbsp;</P></TD>
@@ -557,11 +552,11 @@ body {margin-top: 0px;margin-left: 0px;}
   <TD class="tr11 td13"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr11 td14"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr11 td15"><P class="p6 ft4">&nbsp;</P></TD>
-  <TD class="tr11 td16"><P class="p22 ft14">P</P></TD>
+  <TD class="tr11 td16"></TD>
   <TD class="tr11 td13"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr11 td33"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr11 td34"><P class="p6 ft4">&nbsp;</P></TD>
-  <TD colspan=2 class="tr11 td39"><P class="p23 ft14">P</P></TD>
+  <TD colspan=2 class="tr11 td39"></TD>
   <TD class="tr11 td21"><P class="p6 ft4">&nbsp;</P></TD>
 </TR>
 <TR>
@@ -576,7 +571,7 @@ body {margin-top: 0px;margin-left: 0px;}
   <TD class="tr1 td13"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr1 td14"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr1 td15"><P class="p6 ft4">&nbsp;</P></TD>
-  <TD class="tr1 td16"><P class="p22 ft14">P</P></TD>
+  <TD class="tr1 td16"></TD>
   <TD class="tr1 td13"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr1 td33"><P class="p6 ft4">&nbsp;</P></TD>
   <TD colspan=3 class="tr1 td57"><P class="p25 ft3">VP for Administration</P></TD>
@@ -663,9 +658,10 @@ body {margin-top: 0px;margin-left: 0px;}
   <TD class="tr1 td30"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr1 td31"><P class="p6 ft4">&nbsp;</P></TD>
   <TD class="tr1 td32"><P class="p6 ft4">&nbsp;</P></TD>
-  @endforeach
 </TR>
 </TABLE>
+<div class="page-break"></div>
+  @endforeach
 </DIV>
 </BODY>
 </HTML>
