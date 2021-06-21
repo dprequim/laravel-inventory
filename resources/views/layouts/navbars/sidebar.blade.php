@@ -9,6 +9,20 @@
             </li>
 
             <li @if ($pageSlug == 'methods') class="active " @endif>
+                <a href="{{ route('checklistone.index') }}">
+                    <i class="tim-icons icon-single-copy-04"></i>
+                    <p>Inventory Checklist 1</p>
+                </a>
+            </li>
+
+            <li @if ($pageSlug == 'methods') class="active " @endif>
+                <a href="{{ route('checklisttwo.index') }}">
+                    <i class="tim-icons icon-single-copy-04"></i>
+                    <p>Inventory Checklist 2</p>
+                </a>
+            </li>
+
+            <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('tin.index') }}">
                     <i class="tim-icons icon-money-coins"></i>
                     <p>Company TIN</p>

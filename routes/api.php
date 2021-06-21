@@ -30,6 +30,8 @@ Route::get('iar/pdf', 'PdfController@iarpdf');
 Route::get('route/pdf', 'PdfController@routepdf');
 Route::get('porder/pdf', 'PdfController@porderpdf');
 Route::get('abs/pdf', 'PdfController@abspdf');
+Route::get('checklistone/pdf', 'PdfController@checklistonepdf');
+Route::get('checklisttwo/pdf', 'PdfController@checklisttwopdf');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
