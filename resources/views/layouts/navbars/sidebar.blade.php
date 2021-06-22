@@ -8,91 +8,105 @@
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'checklistone') class="active " @endif>
+                <a href="{{ route('checklistone.index') }}">
+                    <i class="tim-icons icon-single-copy-04"></i>
+                    <p>Inventory Checklist 1</p>
+                </a>
+            </li>
+
+            <li @if ($pageSlug == 'checklisttwo') class="active " @endif>
+                <a href="{{ route('checklisttwo.index') }}">
+                    <i class="tim-icons icon-single-copy-04"></i>
+                    <p>Inventory Checklist 2</p>
+                </a>
+            </li>
+
+            <li @if ($pageSlug == 'tin') class="active " @endif>
                 <a href="{{ route('tin.index') }}">
                     <i class="tim-icons icon-money-coins"></i>
                     <p>Company TIN</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'routines') class="active " @endif>
                 <a href="{{ route('routines.index') }}">
                     <i class="tim-icons icon-notes"></i>
                     <p>Routine Slip</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'apr') class="active " @endif>
                 <a href="{{ route('apr.index') }}">
                     <i class="tim-icons icon-paper"></i>
                     <p>APR</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'purchaserequest') class="active " @endif>
                 <a href="{{ route('purchaserequest.index') }}">
                     <i class="tim-icons icon-satisfied"></i>
                     <p>Purchase Request</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'rfq') class="active " @endif>
                 <a href="{{ route('rfq.index') }}">
                     <i class="tim-icons icon-tap-02"></i>
                     <p>RFQ</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'cenrr') class="active " @endif>
                 <a href="{{ route('cenrr.index') }}">
                     <i class="tim-icons icon-pencil"></i>
                     <p>CENRR</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'ics') class="active " @endif>
                 <a href="{{ route('ics.index') }}">
                     <i class="tim-icons icon-settings"></i>
                     <p>ICS-Supply </p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'par') class="active " @endif>
                 <a href="{{ route('par.index') }}">
                     <i class="tim-icons icon-delivery-fast"></i>
                     <p>PAR- Supply</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'ris') class="active " @endif>
                 <a href="{{ route('ris.index') }}">
                     <i class="tim-icons icon-single-copy-04"></i>
                     <p>RIS</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'iar') class="active " @endif>
                 <a href="{{ route('iar.index') }}">
                     <i class="tim-icons icon-pin"></i>
                     <p>IAR</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'aba') class="active " @endif>
                 <a href="{{ route('aba.index') }}">
                     <i class="tim-icons icon-notes"></i>
                     <p>Abstract of Bids</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'dv') class="active " @endif>
                 <a href="{{ route('dv.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
                     <p>Disbursement Voucher</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'burs') class="active " @endif>
                 <a href="{{ route('burs.index') }}">
                     <i class="tim-icons icon-sound-wave"></i>
                     <p>BUR</p>
@@ -106,27 +120,27 @@
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'obr') class="active " @endif>
                 <a href="{{ route('obr.index') }}">
                     <i class="tim-icons icon-heart-2"></i>
                     <p>OBR</p>
                 </a>
             </li>
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'ptr') class="active " @endif>
                 <a href="{{ route('ptr.index') }}">
                     <i class="tim-icons icon-credit-card"></i>
                     <p>PTR</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'rep') class="active " @endif>
                 <a href="{{ route('rep.index') }}">
                     <i class="tim-icons icon-settings"></i>
                     <p>Pre-Repair</p>
                 </a>
             </li>
             
-            <li @if ($pageSlug == 'methods') class="active " @endif>
+            <li @if ($pageSlug == 'waste') class="active " @endif>
                 <a href="{{ route('waste.index') }}">
                     <i class="tim-icons icon-trash-simple"></i>
                     <p>Waste Material</p>
@@ -238,27 +252,6 @@
                     <p>Suppliers</p>
                 </a>
             </li> -->
-
-            <!-- <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('methods.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
-                    <p>Methods and Accounts</p>
-                </a>
-            </li> -->
-
-            <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('tin.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
-                    <p>Company TIN</p>
-                </a>
-            </li>
-
-            <li @if ($pageSlug == 'methods') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-wallet-43"></i>
-                    <p>Routine Slip</p>
-                </a>
-            </li>
 
 
             <!-- <li>

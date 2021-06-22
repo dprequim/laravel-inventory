@@ -22,6 +22,8 @@ use App\RepairInspection;
 use App\inspectionReport;
 use App\RoutineSlip;
 use App\BidsAndAwards;
+use App\InventoryChecklistOne;
+use App\InventoryChecklistTwo;
 class PdfController extends Controller
 {
     public function tinpdf()
@@ -75,6 +77,7 @@ class PdfController extends Controller
     public function cenrrpdf()
     {   
         $data = CertificationOfExpenses::get();
+        // dd($data);
         $pdf = PDF::loadView('pdfs.cenrr' , compact('data'));
         return $pdf->stream('Certification Of Expenses.pdf');
     }
@@ -132,5 +135,16 @@ class PdfController extends Controller
         $pdf = PDF::loadView('pdfs.abs' , compact('data'));
         return $pdf->stream('Bids And Awards.pdf');
     }
-    
+    public function checklistonepdf()
+    {   
+        $data = InventoryChecklistOne::get();
+        $pdf = PDF::loadView('pdfs.checklistone' , compact('data'));
+        return $pdf->stream('Inventory Checklist 1.pdf');
+    }
+    public function checklisttwopdf()
+    {   
+        $data = InventoryChecklistTwo::get();
+        $pdf = PDF::loadView('pdfs.checklisttwo' , compact('data'));
+        return $pdf->stream('Inventory Checklist 2.pdf');
+    }
 }
