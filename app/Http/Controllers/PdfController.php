@@ -77,6 +77,7 @@ class PdfController extends Controller
     public function cenrrpdf()
     {   
         $data = CertificationOfExpenses::get();
+        // dd($data);
         $pdf = PDF::loadView('pdfs.cenrr' , compact('data'));
         return $pdf->stream('Certification Of Expenses.pdf');
     }
