@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'New Inventory Checklist', 'pageSlug' => 'checklistone-create', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => 'CIC Inventory Checklist', 'pageSlug' => 'checklistone-create', 'section' => 'transactions'])
 
 @section('content')
     <div class="container-fluid mt--7">
@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">New Inventory Checklist</h3>
+                                <h3 class="mb-0">CIC Inventory Checklist</h3>
                             </div>
                             <div class="col-4 text-right">
                                 <a href="{{ route('checklistone.index') }}" class="btn btn-sm btn-primary">Back to List</a>

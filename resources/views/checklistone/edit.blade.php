@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => __('Inventory Checklist 1'), 'pageSlug' => 'checklistone', 'section' => 'transactions'])
+@extends('layouts.app', ['page' => __('CIC Inventory Checklist'), 'pageSlug' => 'checklistone', 'section' => 'transactions'])
 
 @section('content')
     <div class="container-fluid mt--7">
@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Inventory Checklist 1') }}</h3>
+                                <h3 class="mb-0">{{ __('CIC Inventory Checklist') }}</h3>
                             </div>
                             <div class="col-4 text-right">
                                 <a href="{{ route('checklistone.index') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>

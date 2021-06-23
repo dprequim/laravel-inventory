@@ -8,17 +8,17 @@
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'checklistone') class="active " @endif>
+            <li @if ($pageSlug == 'cicchecklist') class="active " @endif>
                 <a href="{{ route('checklistone.index') }}">
                     <i class="tim-icons icon-single-copy-04"></i>
-                    <p>Inventory Checklist 1</p>
+                    <p>CIC Inventory Checklist</p>
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'checklisttwo') class="active " @endif>
+            <li @if ($pageSlug == 'newchecklist') class="active " @endif>
                 <a href="{{ route('checklisttwo.index') }}">
                     <i class="tim-icons icon-single-copy-04"></i>
-                    <p>Inventory Checklist 2</p>
+                    <p>New Inventory Checklist</p>
                 </a>
             </li>
 

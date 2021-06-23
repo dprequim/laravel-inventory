@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'checklistone', 'pageSlug' => 'checklistone', 'section' => 'checklistone'])
+@extends('layouts.app', ['page' => 'cicchecklist', 'pageSlug' => 'checklistone', 'section' => 'checklistone'])
 
 @section('content')
     @include('alerts.success')
@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title"><strong>Inventory Checklist Lists</strong></h4>
+                            <h4 class="card-title"><strong>CIC Inventory Checklist</strong></h4>
                             <form action="{{ route('checklistone.index') }}" method="GET">
                                 <input class="pl-lg-4" type="text" name="search" placeholder="Search Item/Property No." required/>
                                 <button type="submit" class="btn btn-sm btn-secondary">Search</button>
