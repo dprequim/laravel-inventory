@@ -18,7 +18,7 @@
             <li @if ($pageSlug == 'newchecklist') class="active " @endif>
                 <a href="{{ route('checklisttwo.index') }}">
                     <i class="tim-icons icon-single-copy-04"></i>
-                    <p>New Inventory Checklist</p>
+                    <p>New Inventory</p>
                 </a>
             </li>
 
