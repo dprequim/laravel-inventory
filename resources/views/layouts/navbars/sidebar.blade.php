@@ -22,19 +22,7 @@
                 </a>
             </li>
 
-            <li @if ($pageSlug == 'tin') class="active " @endif>
-                <a href="{{ route('tin.index') }}">
-                    <i class="tim-icons icon-money-coins"></i>
-                    <p>Company TIN</p>
-                </a>
-            </li>
-
-            <li @if ($pageSlug == 'routines') class="active " @endif>
-                <a href="{{ route('routines.index') }}">
-                    <i class="tim-icons icon-notes"></i>
-                    <p>Routine Slip</p>
-                </a>
-            </li>
+            
 
             <li @if ($pageSlug == 'apr') class="active " @endif>
                 <a href="{{ route('apr.index') }}">
