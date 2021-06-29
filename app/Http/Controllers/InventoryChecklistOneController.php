@@ -17,8 +17,8 @@ class InventoryChecklistOneController extends Controller
     {
         return view('checklistone.index', [
             'checklistone' => InventoryChecklistOne::query()
-            ->where('item', 'LIKE', "%{$request->search}%")
-            ->orWhere('property_no', 'LIKE', "%{$request->search}%")->paginate(15), 
+            ->where('item', 'ilike', "%{$request->search}%")
+            ->orWhere('property_no', 'ilike', "%{$request->search}%")->paginate(15), 
             // 'month' => Carbon::now()->month
         ]);
     }

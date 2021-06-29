@@ -20,12 +20,12 @@
                             @csrf
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('item_no') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-item_no">ITEM No.</label>
+                                    <label class="form-control-label" for="input-item_no">ITEM NO.</label>
                                     <input type="text" name="item_no" id="input-item_no" class="form-control form-control-alternative{{ $errors->has('item_no') ? ' is-invalid' : '' }}"  value="{{ old('item_no') }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'item_no'])
                                 </div>
                                 <div class="form-group{{ $errors->has('item_desc') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-item_desc">ITEM DESCRIPT</label>
+                                    <label class="form-control-label" for="input-item_desc">ITEM DESCRIPTION</label>
                                     <input type="text" name="item_desc" id="input-item_desc" class="form-control form-control-alternative{{ $errors->has('item_desc') ? ' is-invalid' : '' }}" value="{{ old('item_desc') }}" required>
                                     @include('alerts.feedback', ['field' => 'item_desc'])
                                 </div>

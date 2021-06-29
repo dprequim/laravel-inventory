@@ -43,6 +43,20 @@
                 </a>
             </li>
 
+            <li @if ($pageSlug == 'apr_in') class="active " @endif>
+                <a href="{{ route('apr_in.index') }}">
+                    <i class="tim-icons icon-paper"></i>
+                    <p>APR Stock-in</p>
+                </a>
+            </li>
+
+            <li @if ($pageSlug == 'apr_out') class="active " @endif>
+                <a href="{{ route('apr_out.index') }}">
+                    <i class="tim-icons icon-paper"></i>
+                    <p>APR Stock-out</p>
+                </a>
+            </li>
+
             <li @if ($pageSlug == 'purchaserequest') class="active " @endif>
                 <a href="{{ route('purchaserequest.index') }}">
                     <i class="tim-icons icon-satisfied"></i>
