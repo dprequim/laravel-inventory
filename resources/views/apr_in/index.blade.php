@@ -34,10 +34,10 @@
                             <tbody>
                                 @foreach ($apr_in as $item)
                                     <tr>
-                                        <td>{{ $item->Apr->item_no }}</td>
-                                        <td>{{ $item->department }}</td>
-                                        <td>{{ $item->stock_in }}</td>
-                                        <td>{{ $item->date }}</td>
+                                        <td>{{ $item->Apr->item_no??'' }}</td>
+                                        <td>{{ $item->department??'' }}</td>
+                                        <td>{{ $item->stock_in??'' }}</td>
+                                        <td>{{ $item->date??'' }}</td>
                                         <td class="td-actions text-right">
                                             <!-- <a href="{{ route('apr_in.edit', $item) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Item">
                                                 <i class="tim-icons icon-pencil"></i>
