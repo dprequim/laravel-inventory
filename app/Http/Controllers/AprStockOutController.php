@@ -20,9 +20,9 @@ class AprStockOutController extends Controller
     {
         return view('apr_out.index', [
             'apr_out' => AprStockOut::query()
-            ->where('department', 'ilike', "%{$request->search}%")
+            ->where('department', 'like', "%{$request->search}%")
             ->orwhereHas('Apr', function($q) use($request){
-                $q->where('item_no', 'ilike', "%{$request->search}%");
+                $q->where('item_no', 'like', "%{$request->search}%");
             })->with('Apr')->paginate(15), 
             'month' => Carbon::now()->month
         ]);
