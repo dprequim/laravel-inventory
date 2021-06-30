@@ -1,4 +1,5 @@
-@extends('layouts.app', ['page' => 'newinventory', 'pageSlug' => 'checklisttwo', 'section' => 'checklisttwo'])
+@extends('layouts.app', ['page' => 'adas', 'pageSlug' => 'checklisttwo', 'section' => 'checklisttwo'])
+
 
 @section('content')
     @include('alerts.success')

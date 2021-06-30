@@ -17,8 +17,8 @@ class InventoryChecklistTwoController extends Controller
     {
         return view('checklisttwo.index', [
             'checklisttwo' => InventoryChecklistTwo::query()
-            ->where('item', 'LIKE', "%{$request->search}%")
-            ->orWhere('property_no', 'LIKE', "%{$request->search}%")->paginate(15), 
+            ->where('item', 'like', "%{$request->search}%")
+            ->orWhere('property_no', 'like', "%{$request->search}%")->paginate(15), 
             // 'month' => Carbon::now()->month
         ]);
     }
