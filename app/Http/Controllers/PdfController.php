@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use PDF;
+use App\Book;
 use App\Tin;
 use App\Apr;
 use App\PurchaseRequest;
@@ -146,5 +147,12 @@ class PdfController extends Controller
         $data = InventoryChecklistTwo::get();
         $pdf = PDF::loadView('pdfs.checklisttwo' , compact('data'));
         return $pdf->stream('Inventory Checklist 2.pdf');
+    }
+
+    public function bookspdf()
+    {   
+        $data = Book::get();
+        $pdf = PDF::loadView('pdfs.books' , compact('data'));
+        return $pdf->stream('Books.pdf');
     }
 }

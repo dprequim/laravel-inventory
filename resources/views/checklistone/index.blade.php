@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'cicchecklist', 'pageSlug' => 'checklistone', 'section' => 'checklistone'])
+@extends('layouts.app', ['page' => 'cicchecklist', 'pageSlug' => 'cicchecklist', 'section' => 'cicchecklist'])
 
 @section('content')
     @include('alerts.success')

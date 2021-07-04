@@ -1,4 +1,4 @@
-@extends('layouts.app', ['page' => 'adas', 'pageSlug' => 'checklisttwo', 'section' => 'checklisttwo'])
+@extends('layouts.app', ['page' => 'newchecklist', 'pageSlug' => 'newchecklist', 'section' => 'newchecklist'])
 
 
 @section('content')
