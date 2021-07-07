@@ -9,7 +9,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title"><strong>New Inventory Checklist</strong></h4>
+                            <h4 class="card-title"><strong></strong></h4>
                             <form action="{{ route('checklisttwo.index') }}" method="GET">
                                 <input class="pl-lg-4" type="text" name="search" placeholder="Search Item/Property No." required/>
                                 <button type="submit" class="btn btn-sm btn-secondary">Search</button>
