@@ -19,13 +19,13 @@
                         <form method="post" action="{{ route('books_in.store') }}" autocomplete="off">
                             @csrf
                             <div class="pl-lg-4">
-                                <div class="form-group{{ $errors->has('book_id') ? ' has-danger' : '' }}">
-                                    <select style="color:gray;" name="book_id" id="input-book_id" class="form-select form-control-alternative{{ $errors->has('book_id') ? ' is-invalid' : '' }}" required>
-                                        <option selected="true" disabled="disabled">Select Book Name</option>  
-                                        @foreach($books as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>
-                                        @endforeach
-                                    </select>
+                            <div class="form-group{{ $errors->has('book_id') ? ' has-danger' : '' }}">
+                                <select style="color:gray;" class="form-control" name="book_id">
+                                <option selected="true" disabled="disabled">Select Book</option>  
+                                    @foreach($books as $item)
+                                    <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
+                                </select>
                                     @include('alerts.feedback', ['field' => 'book_id'])
                                 </div>
                                 <div class="form-group{{ $errors->has('quantity') ? ' has-danger' : '' }}">

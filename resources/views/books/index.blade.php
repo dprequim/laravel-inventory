@@ -23,13 +23,15 @@
                             <thead class=" text-primary">
                                 <th scope="col">NAME</th>
                                 <th scope="col">QUANTITY</th>
+                                <th scope="col">DATE UPDATED</th>
                                 <th scope="col"></th>
                             </thead>
                             <tbody>
                                 @foreach ($books as $book)
                                     <tr>
-                                        <td>{{ $book->name }}</td>
-                                        <td>{{ $book->quantity }}</td>
+                                        <td>{{ $book->name??'' }}</td>
+                                        <td>{{ $book->quantity??'' }}</td>
+                                        <td>{{ $book->updated_at??'' }}</td>
                                         <td class="td-actions text-right">
                                             <a href="{{ route('books.edit', $book) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Book">
                                                 <i class="tim-icons icon-pencil"></i>

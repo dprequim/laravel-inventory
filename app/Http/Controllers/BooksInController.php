@@ -23,7 +23,7 @@ class BooksInController extends Controller
             $q->where('name', 'like', "%{$request->search}%");
         })->with('Book')->paginate(15);
 
-        return view('books.books_in.index', compact('books_in'));
+        return view('books_in.index', compact('books_in'));
     }
 
     /**
@@ -34,7 +34,7 @@ class BooksInController extends Controller
     public function create()
     {
         $books = Book::all(['id', 'name']);
-        return view('books.books_in.create', compact('books'));
+        return view('books_in.create', compact('books'));
     }
 
     /**
@@ -51,6 +51,6 @@ class BooksInController extends Controller
         $books->save();
         return redirect()
             ->route('books_in.index')
-            ->withStatus('Stock Added successfully.');
+            ->withStatus('Stock-in successfully.');
     }
 }

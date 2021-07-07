@@ -18,14 +18,12 @@ class BooksOutController extends Controller
 
     public function index(Request $request)
     {
-        return view('books_out.index', [
-            'books_out' => BooksOut::query()
-            ->whereHas('Book', function($q) use($request){
-                $q->where('name', 'like', "%{$request->search}%");
-            })
-            ->with('Book')->paginate(15), 
-            'month' => Carbon::now()->month
-        ]);
+        $books_out =  BooksOut::query()
+        ->whereHas('Book', function($q) use($request){
+            $q->where('name', 'like', "%{$request->search}%");
+        })->with('Book')->paginate(15);
+
+        return view('books_out.index', compact('books_out')); 
     }
 
     /**
@@ -53,7 +51,7 @@ class BooksOutController extends Controller
         $book->save();
         return redirect()
             ->route('books_out.index')
-            ->withStatus('Book Stock-out successfully created.');
+            ->withStatus('Stock-out successfully.');
     }
 
     /**

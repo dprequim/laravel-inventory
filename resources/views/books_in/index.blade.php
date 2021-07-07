@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title"><strong>Stock-in</strong></h4>
+                            <h4 class="card-title"><strong>Books Stock-in</strong></h4>
                             <form action="{{ route('books_in.index') }}" method="GET">
                                 <input class="pl-lg-4" type="text" name="search" placeholder="Search Name" required/>
                                 <button type="submit" class="btn btn-sm btn-secondary">Search</button>
@@ -28,12 +28,14 @@
                             <thead class=" text-primary">
                                 <th scope="col">BOOK NAME</th>
                                 <th scope="col">QUANTITY</th>
+                                <th scope="col">STOCK-IN DATE</th>
                             </thead>
                             <tbody>
                                 @foreach ($books_in as $item)
                                     <tr>
                                         <td>{{ $item->Book->name??'' }}</td>
                                         <td>{{ $item->quantity??'' }}</td>
+                                        <td>{{ $item->created_at??'' }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

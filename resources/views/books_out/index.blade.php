@@ -8,15 +8,15 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-8">
-                            <h4 class="card-title"><strong>Stock-out</strong></h4>
-                            <form action="{{ route('stockout.index') }}" method="GET">
+                            <h4 class="card-title"><strong>Books Stock-out</strong></h4>
+                            <form action="{{ route('books_out.index') }}" method="GET">
                                 <input class="pl-lg-4" type="text" name="search" placeholder="Search Name" required/>
                                 <button type="submit" class="btn btn-sm btn-secondary">Search</button>
-                                <a href="{{ route('stockout.index') }}" class="btn btn-sm btn-secondary">Refresh</a>
+                                <a href="{{ route('books_out.index') }}" class="btn btn-sm btn-secondary">Refresh</a>
                             </form>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('stockout.create') }}" class="btn btn-sm btn-primary">Stock-out</a>
+                            <a href="{{ route('books_out.create') }}" class="btn btn-sm btn-primary">Stock-out</a>
                             <!-- <a href="{{ 'api/apr_in/pdf' }}" class="btn btn-sm btn-primary">Print</a> -->
                         </div>
                     </div>
@@ -28,12 +28,14 @@
                             <thead class=" text-primary">
                                 <th scope="col">BOOK NAME</th>
                                 <th scope="col">QUANTITY</th>
+                                <th scope="col">STOCK-OUT DATE</th>
                             </thead>
                             <tbody>
                                 @foreach ($books_out as $item)
                                     <tr>
                                         <td>{{ $item->Book->name??'' }}</td>
                                         <td>{{ $item->quantity??'' }}</td>
+                                        <td>{{ $item->created_at??'' }}</td>
                                         <td class="td-actions text-right">
                                             <!-- <a href="{{ route('apr_in.edit', $item) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Edit Item">
                                                 <i class="tim-icons icon-pencil"></i>
