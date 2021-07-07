@@ -10,7 +10,7 @@
                         <div class="col-8">
                             <h4 class="card-title"><strong>Books Stock-in</strong></h4>
                             <form action="{{ route('books_in.index') }}" method="GET">
-                                <input class="pl-lg-4" type="text" name="search" placeholder="Search Name" required/>
+                                <input class="pl-lg-4" type="text" name="search" placeholder="Search Book Name" required/>
                                 <button type="submit" class="btn btn-sm btn-secondary">Search</button>
                                 <a href="{{ route('books_in.index') }}" class="btn btn-sm btn-secondary">Refresh</a>
                             </form>

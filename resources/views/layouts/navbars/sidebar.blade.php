@@ -1,12 +1,13 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <!-- <li @if ($pageSlug == 'dashboard') class="active " @endif>
+        <br>
+            <li @if ($pageSlug == 'dashboard') class="active " @endif>
                 <a href="{{ route('home') }}">
                     <i class="tim-icons icon-chart-bar-32"></i>
                     <p>Dashboard</p>
                 </a>
-            </li> -->
+            </li>
 
             <li @if ($pageSlug == 'cicchecklist') class="active " @endif>
                 <a href="{{ route('checklistone.index') }}">
